@@ -122,12 +122,18 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
 		FCLLayer* emitterLayer = layers[k-1];
 		FCLLayer* receiverLayer = layers[k];
+
 		// Calculate the errors for the hidden layer
-		for(int i=0;i<receiverLayer->getNneurons();i++) {
+		for(int i=0;i<receiverLayer->getNneurons();i++) 
+		{
 			double err = 0;
-			for(int j=0;j<emitterLayer->getNneurons();j++) {
+			double absWeight = 0;
+			for(int j=0;j<emitterLayer->getNneurons();j++)
+			{
 				err = err + receiverLayer->getNeuron(i)->getWeight(j) *
 					emitterLayer->getNeuron(j)->getError();
+				absWeight = absWeight + fabs(receiverLayer->getNeuron(i)->getWeight(j));
+
 #ifdef DEBUG
 				if (isnan(err) || (fabs(err)>10000) || (fabs(emitterLayer->getNeuron(j)->getError())>10000)) {
 					printf("RANGE! FeedforwardClosedloopLearning::%s, step=%ld, j=%d, i=%d, hidLayerIndex=%d, "
@@ -135,9 +141,15 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 					       __func__,step,j,i,k,err,emitterLayer->getNeuron(j)->getError());
 				}
 #endif
+
 			}
+			// learningRateDiscountFactor = 1 in this case.
 			err = err * learningRateDiscountFactor;
 			err = err * emitterLayer->getNneurons();
+
+			// Error devided by summation of abs of weights.
+			err = err / absWeight;
+
 			err = err * receiverLayer->getNeuron(i)->dActivation();
 			receiverLayer->getNeuron(i)->setError(err);
 		}

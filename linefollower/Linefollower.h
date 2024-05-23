@@ -28,7 +28,7 @@ double	maxy = 300;
 
 // for stats
 #define SQ_ERROR_THRES 0.001
-#define STEPS_BELOW_ERR_THRESHOLD 1000
+#define STEPS_BELOW_ERR_THRESHOLD 100000
 
 // max number of steps to terminate
 #define MAX_STEPS 200000

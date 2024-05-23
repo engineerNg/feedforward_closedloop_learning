@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfcl_static.a CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o CMakeFiles/fcl_static.dir/fcl/layer.cpp.o CMakeFiles/fcl_static.dir/fcl.cpp.o CMakeFiles/fcl_static.dir/fcl_util.cpp.o
+/usr/bin/ranlib libfcl_static.a

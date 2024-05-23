@@ -37,6 +37,10 @@ protected:
 	int successCtr = 0;
 
 	int trackCompletedCtr = 5000;
+	
+	// Flag to represent the finish of training.
+	int trainingFinished = 0;
+
 		
 public:
 	LineFollower(World *world, QWidget *parent = 0) :
@@ -92,11 +96,15 @@ public:
 	// as an example: line following and obstacle avoidance
 	virtual void sceneCompletedHook()
 	{
+		// These 4 variables are for reflex loop.  
 		double leftGround = racer->groundSensorLeft.getValue();
 		double rightGround = racer->groundSensorRight.getValue();
 		double leftGround2 = racer->groundSensorLeft2.getValue();
 		double rightGround2 = racer->groundSensorRight2.getValue();
 
+		// Expose dActivation here for debugging.
+		vector<double> dActivation = {};
+		
 		fprintf(stderr,"%e\t",racer->pos.x);
 		fprintf(fcoord,"%e\t%e\n",racer->pos.x,racer->pos.y);
 		// check if we've bumped into a wall
@@ -120,7 +128,7 @@ public:
 			step = MAX_STEPS;
 			qApp->quit();
 		}
-		fprintf(stderr,"%d ",learningOff);
+		//fprintf(stderr,"%d ",learningOff);
 		if (learningOff>0) {
 			fcl->setLearningRate(0);
 			learningOff--;
@@ -140,7 +148,14 @@ public:
 			e = error;
                 }
 		// !!!!
-		fcl->doStep(pred,err);
+		fcl->doStep(pred,err);	
+		
+		// Get dActivation.
+		for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
+		{
+			dActivation.push_back(fcl->getOutputLayer()->getNeuron(i)->dActivation());
+		}
+
 		float vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*50 +
 				   (fcl->getOutputLayer()->getNeuron(1)->getOutput())*10 +
 				   (fcl->getOutputLayer()->getNeuron(2)->getOutput())*2);
@@ -149,10 +164,18 @@ public:
 				   (fcl->getOutputLayer()->getNeuron(5)->getOutput())*2);
 		
 		double erroramp = error * fbgain;
+		// if (!trainingFinished)
+		// {
 		fprintf(stderr,"%e ",erroramp);
 		fprintf(stderr,"%e ",vL);
-		fprintf(stderr,"%e ",vR);
-		fprintf(stderr,"\n");
+		fprintf(stderr,"%e \n",vR);
+		// 	fprintf(stderr, "%d ", successCtr);
+		// 	//fprintf(stderr,"Training not finished! \n");
+		// } else {
+		// 	fprintf(stderr,"%e ",erroramp);
+		// 	fprintf(stderr,"Training finished! \n");
+		// }
+
 		racer->leftSpeed = speed+erroramp+vL;
 		racer->rightSpeed = speed-erroramp+vR;
 
@@ -167,14 +190,24 @@ public:
 		} else {
 			successCtr++;
 		}
+
+		// Early stopping by setting learning rate to 0 in order to prevent overtraining.
 		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
 			qApp->quit();
 		}
 		if (step>MAX_STEPS) {
 			qApp->quit();
 		}
+
 		
 		fprintf(flog,"%e\t",error);
+
+		// The derivative of activation function shown below:
+		for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
+		{
+			fprintf(flog, "%e\t", dActivation[i]);
+		}
+
 		fprintf(flog,"%e\t",avgError);
 		fprintf(flog,"%e\t%e",vL,vR);
 		for(int i=0;i<fcl->getNumLayers();i++) {
@@ -253,6 +286,9 @@ int main(int argc, char *argv[]) {
 		break;
 	case 1:
 		statsRun(argc,argv);
+		break;
+	case 2:
+		singleRun(argc,argv,0);
 		break;
 	}
 	return 0;
