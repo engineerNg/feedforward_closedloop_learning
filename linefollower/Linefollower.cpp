@@ -41,6 +41,9 @@ protected:
 	// Flag to represent the finish of training.
 	int trainingFinished = 0;
 
+	// Sliding window average.
+	double avgOutput[6] = {0};
+
 		
 public:
 	LineFollower(World *world, QWidget *parent = 0) :
@@ -105,7 +108,7 @@ public:
 		// Expose dActivation here for debugging.
 		vector<double> dActivation = {};
 		
-		fprintf(stderr,"%e\t",racer->pos.x);
+		// fprintf(stderr,"%e\t",racer->pos.x);
 		fprintf(fcoord,"%e\t%e\n",racer->pos.x,racer->pos.y);
 		// check if we've bumped into a wall
 		if ((racer->pos.x<75) ||
@@ -136,7 +139,7 @@ public:
 			fcl->setLearningRate(learningRate);
 		}
 
-		fprintf(stderr,"%e %e %e %e ",leftGround,rightGround,leftGround2,rightGround2);
+		//fprintf(stderr,"%e %e %e %e ",leftGround,rightGround,leftGround2,rightGround2);
 		for(int i=0;i<racer->getNsensors();i++) {
 			pred[i] = -(racer->getSensorArrayValue(i))*10;
 			// workaround of a bug in Enki
@@ -164,17 +167,22 @@ public:
 				   (fcl->getOutputLayer()->getNeuron(5)->getOutput())*2);
 		
 		double erroramp = error * fbgain;
-		// if (!trainingFinished)
-		// {
-		fprintf(stderr,"%e ",erroramp);
+
+		fprintf(stderr, "%e ", erroramp);
+		//fprintf(stderr,"%e ",error);
+		
+		// Outputs of each neuron of output layer. 
+		for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
+		{
+			avgOutput[i] = avgOutput[i] * (double)(step + 1) + fcl->getOutputLayer()->getNeuron(i)->getOutput();
+			avgOutput[i] /= (double)(step + 1);
+
+			fprintf(stderr,"%e ", avgOutput[i]);
+			fprintf(flog,"%e\t", avgOutput[i]);
+		}
 		fprintf(stderr,"%e ",vL);
 		fprintf(stderr,"%e \n",vR);
-		// 	fprintf(stderr, "%d ", successCtr);
-		// 	//fprintf(stderr,"Training not finished! \n");
-		// } else {
-		// 	fprintf(stderr,"%e ",erroramp);
-		// 	fprintf(stderr,"Training finished! \n");
-		// }
+		// fprintf(stderr, "\n");
 
 		racer->leftSpeed = speed+erroramp+vL;
 		racer->rightSpeed = speed-erroramp+vR;
@@ -191,7 +199,6 @@ public:
 			successCtr++;
 		}
 
-		// Early stopping by setting learning rate to 0 in order to prevent overtraining.
 		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
 			qApp->quit();
 		}
@@ -199,20 +206,20 @@ public:
 			qApp->quit();
 		}
 
-		
-		fprintf(flog,"%e\t",error);
-
 		// The derivative of activation function shown below:
-		for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
-		{
-			fprintf(flog, "%e\t", dActivation[i]);
-		}
+		// for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
+		// {
+		// 	fprintf(flog, "%e\t", dActivation[i]);
+		// }
 
 		fprintf(flog,"%e\t",avgError);
-		fprintf(flog,"%e\t%e",vL,vR);
-		for(int i=0;i<fcl->getNumLayers();i++) {
-			fprintf(flog,"\t%e",fcl->getLayer(i)->getWeightDistanceFromInitialWeights());
-		}
+		fprintf(flog,"%e\t",error);
+		fprintf(flog,"%e\t",erroramp);
+		fprintf(flog,"%e\t%e",vL,vR); 
+
+		// for(int i=0;i<fcl->getNumLayers();i++) {
+		// 	fprintf(flog,"\t%e",fcl->getLayer(i)->getWeightDistanceFromInitialWeights());
+		// }
 		fprintf(flog,"\n");
 
 		if ((step%100)==0) {

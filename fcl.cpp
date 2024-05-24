@@ -94,11 +94,13 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 		#endif
 		throw tmp;
 	}
+
 	// we set the input to the input layer
 	layers[0]->setInputs(input.data());
 	// ..and calc its output
 	layers[0]->calcOutputs();
 	// new lets calc the other outputs
+
 	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
 		FCLLayer* emitterLayer = layers[k-1];
 		FCLLayer* receiverLayer = layers[k];
@@ -115,10 +117,13 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 		// now let's calc the output which can then be sent out
 		receiverLayer->calcOutputs();
 	}
+
 	// the error is injected into the 1st layer!
 	for(int i=0;i<(layers[0]->getNneurons());i++) {
 		layers[0]->getNeuron(i)->setError(error[i]);
 	}
+
+	// Errors update.
 	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
 		FCLLayer* emitterLayer = layers[k-1];
 		FCLLayer* receiverLayer = layers[k];
@@ -145,15 +150,20 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 			}
 			// learningRateDiscountFactor = 1 in this case.
 			err = err * learningRateDiscountFactor;
-			err = err * emitterLayer->getNneurons();
 
+			// Normalization.
 			// Error devided by summation of abs of weights.
-			err = err / absWeight;
+			err = err * emitterLayer->getNneurons();
+			//err = err / absWeight;
+			// fprintf(stderr, "%e\n", absWeight);
 
 			err = err * receiverLayer->getNeuron(i)->dActivation();
+			
 			receiverLayer->getNeuron(i)->setError(err);
 		}
 	}
+
+
 	doLearning();
 	setStep();
 	step++;

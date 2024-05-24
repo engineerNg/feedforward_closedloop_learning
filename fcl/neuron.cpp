@@ -162,7 +162,7 @@ void FCLNeuron::doLearning() {
 			*weightschp = momentum * (*weightschp) +
 				(*inputsp) * error * learningRate * learningRateFactor -
 				(*weightsp) * decay * learningRate * fabs(error);
-			*weightsp = *weightsp + *weightschp;
+			*weightsp =  (*weightsp) + *weightschp;
 #ifdef DEBUG
 			if (isnan(sum) || isnan(weights[i]) || isnan(inputs[i]) || (fabs(sum)>SUM_ERR_THRES)) {
 				fprintf(stderr,"Out of range Neuron::%s step=%ld, L=%d, N=%d, %f, %f, %f, %d\n",
