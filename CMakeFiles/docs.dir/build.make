@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Utility rule file for docs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/docs.dir/compiler_depend.make
 include CMakeFiles/docs.dir/progress.make
 
 CMakeFiles/docs:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
 	/usr/bin/doxygen
 
 docs: CMakeFiles/docs
@@ -83,6 +83,6 @@ CMakeFiles/docs.dir/clean:
 .PHONY : CMakeFiles/docs.dir/clean
 
 CMakeFiles/docs.dir/depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles/docs.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles/docs.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/docs.dir/depend
 

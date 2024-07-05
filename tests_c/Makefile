@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c//CMakeFiles/progress.marks
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles 0
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles /home/kinsley/github_project/feedforward_closedloop_learning/tests_c//CMakeFiles/progress.marks
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/clean
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/preinstall
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/preinstall
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests_c/CMakeFiles/test_bandpass.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_bandpass.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_bandpass.dir/rule
 .PHONY : tests_c/CMakeFiles/test_bandpass.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ test_bandpass: tests_c/CMakeFiles/test_bandpass.dir/rule
 
 # fast build rule for target.
 test_bandpass/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/build
 .PHONY : test_bandpass/fast
 
 # Convenience name for target.
 tests_c/CMakeFiles/test_fcl.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_fcl.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_fcl.dir/rule
 .PHONY : tests_c/CMakeFiles/test_fcl.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ test_fcl: tests_c/CMakeFiles/test_fcl.dir/rule
 
 # fast build rule for target.
 test_fcl/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/build
 .PHONY : test_fcl/fast
 
 # Convenience name for target.
 tests_c/CMakeFiles/test_layer.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_layer.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_layer.dir/rule
 .PHONY : tests_c/CMakeFiles/test_layer.dir/rule
 
 # Convenience name for target.
@@ -200,12 +200,12 @@ test_layer: tests_c/CMakeFiles/test_layer.dir/rule
 
 # fast build rule for target.
 test_layer/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/build
 .PHONY : test_layer/fast
 
 # Convenience name for target.
 tests_c/CMakeFiles/test_neuron.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_neuron.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_neuron.dir/rule
 .PHONY : tests_c/CMakeFiles/test_neuron.dir/rule
 
 # Convenience name for target.
@@ -214,12 +214,12 @@ test_neuron: tests_c/CMakeFiles/test_neuron.dir/rule
 
 # fast build rule for target.
 test_neuron/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/build
 .PHONY : test_neuron/fast
 
 # Convenience name for target.
 tests_c/CMakeFiles/test_fcl_filters.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_fcl_filters.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_c/CMakeFiles/test_fcl_filters.dir/rule
 .PHONY : tests_c/CMakeFiles/test_fcl_filters.dir/rule
 
 # Convenience name for target.
@@ -228,7 +228,7 @@ test_fcl_filters: tests_c/CMakeFiles/test_fcl_filters.dir/rule
 
 # fast build rule for target.
 test_fcl_filters/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/build
 .PHONY : test_fcl_filters/fast
 
 test_bandpass.o: test_bandpass.cpp.o
@@ -236,7 +236,7 @@ test_bandpass.o: test_bandpass.cpp.o
 
 # target to build an object file
 test_bandpass.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.o
 .PHONY : test_bandpass.cpp.o
 
 test_bandpass.i: test_bandpass.cpp.i
@@ -244,7 +244,7 @@ test_bandpass.i: test_bandpass.cpp.i
 
 # target to preprocess a source file
 test_bandpass.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.i
 .PHONY : test_bandpass.cpp.i
 
 test_bandpass.s: test_bandpass.cpp.s
@@ -252,7 +252,7 @@ test_bandpass.s: test_bandpass.cpp.s
 
 # target to generate assembly for a file
 test_bandpass.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_bandpass.dir/build.make tests_c/CMakeFiles/test_bandpass.dir/test_bandpass.cpp.s
 .PHONY : test_bandpass.cpp.s
 
 test_fcl.o: test_fcl.cpp.o
@@ -260,7 +260,7 @@ test_fcl.o: test_fcl.cpp.o
 
 # target to build an object file
 test_fcl.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.o
 .PHONY : test_fcl.cpp.o
 
 test_fcl.i: test_fcl.cpp.i
@@ -268,7 +268,7 @@ test_fcl.i: test_fcl.cpp.i
 
 # target to preprocess a source file
 test_fcl.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.i
 .PHONY : test_fcl.cpp.i
 
 test_fcl.s: test_fcl.cpp.s
@@ -276,7 +276,7 @@ test_fcl.s: test_fcl.cpp.s
 
 # target to generate assembly for a file
 test_fcl.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl.dir/build.make tests_c/CMakeFiles/test_fcl.dir/test_fcl.cpp.s
 .PHONY : test_fcl.cpp.s
 
 test_fcl_filters.o: test_fcl_filters.cpp.o
@@ -284,7 +284,7 @@ test_fcl_filters.o: test_fcl_filters.cpp.o
 
 # target to build an object file
 test_fcl_filters.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.o
 .PHONY : test_fcl_filters.cpp.o
 
 test_fcl_filters.i: test_fcl_filters.cpp.i
@@ -292,7 +292,7 @@ test_fcl_filters.i: test_fcl_filters.cpp.i
 
 # target to preprocess a source file
 test_fcl_filters.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.i
 .PHONY : test_fcl_filters.cpp.i
 
 test_fcl_filters.s: test_fcl_filters.cpp.s
@@ -300,7 +300,7 @@ test_fcl_filters.s: test_fcl_filters.cpp.s
 
 # target to generate assembly for a file
 test_fcl_filters.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_fcl_filters.dir/build.make tests_c/CMakeFiles/test_fcl_filters.dir/test_fcl_filters.cpp.s
 .PHONY : test_fcl_filters.cpp.s
 
 test_layer.o: test_layer.cpp.o
@@ -308,7 +308,7 @@ test_layer.o: test_layer.cpp.o
 
 # target to build an object file
 test_layer.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.o
 .PHONY : test_layer.cpp.o
 
 test_layer.i: test_layer.cpp.i
@@ -316,7 +316,7 @@ test_layer.i: test_layer.cpp.i
 
 # target to preprocess a source file
 test_layer.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.i
 .PHONY : test_layer.cpp.i
 
 test_layer.s: test_layer.cpp.s
@@ -324,7 +324,7 @@ test_layer.s: test_layer.cpp.s
 
 # target to generate assembly for a file
 test_layer.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_layer.dir/build.make tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.s
 .PHONY : test_layer.cpp.s
 
 test_neuron.o: test_neuron.cpp.o
@@ -332,7 +332,7 @@ test_neuron.o: test_neuron.cpp.o
 
 # target to build an object file
 test_neuron.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o
 .PHONY : test_neuron.cpp.o
 
 test_neuron.i: test_neuron.cpp.i
@@ -340,7 +340,7 @@ test_neuron.i: test_neuron.cpp.i
 
 # target to preprocess a source file
 test_neuron.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.i
 .PHONY : test_neuron.cpp.i
 
 test_neuron.s: test_neuron.cpp.s
@@ -348,7 +348,7 @@ test_neuron.s: test_neuron.cpp.s
 
 # target to generate assembly for a file
 test_neuron.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f tests_c/CMakeFiles/test_neuron.dir/build.make tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.s
 .PHONY : test_neuron.cpp.s
 
 # Help Target
@@ -394,6 +394,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

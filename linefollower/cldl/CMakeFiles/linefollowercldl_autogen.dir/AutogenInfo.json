@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen",
-	"CMAKE_BINARY_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl",
+	"BUILD_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt",
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt",
 		"/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -33,21 +33,21 @@
 		"/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning",
-	"DEP_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning",
+	"DEP_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "linefollowercldl_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.h",
 			"MU",
 			"5AV2COFX37/moc_Racer.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -66,8 +66,8 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl",
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower",
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl",
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower",
 		"/usr/include/qt5",
 		"/usr/include/qt5/QtOpenGL",
 		"/usr/include/qt5/QtWidgets",
@@ -93,29 +93,29 @@
 		"-c",
 		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp"
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib64/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib64/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp",
 			"MU",
 			null
 		]
@@ -124,7 +124,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp"
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Include any dependencies generated for this target.
 include tests_c/CMakeFiles/test_neuron.dir/depend.make
@@ -72,16 +72,16 @@ include tests_c/CMakeFiles/test_neuron.dir/flags.make
 tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o: tests_c/CMakeFiles/test_neuron.dir/flags.make
 tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o: tests_c/test_neuron.cpp
 tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o: tests_c/CMakeFiles/test_neuron.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o -MF CMakeFiles/test_neuron.dir/test_neuron.cpp.o.d -o CMakeFiles/test_neuron.dir/test_neuron.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o -MF CMakeFiles/test_neuron.dir/test_neuron.cpp.o.d -o CMakeFiles/test_neuron.dir/test_neuron.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp
 
 tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_neuron.dir/test_neuron.cpp.i"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp > CMakeFiles/test_neuron.dir/test_neuron.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp > CMakeFiles/test_neuron.dir/test_neuron.cpp.i
 
 tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_neuron.dir/test_neuron.cpp.s"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp -o CMakeFiles/test_neuron.dir/test_neuron.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/tests_c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/test_neuron.cpp -o CMakeFiles/test_neuron.dir/test_neuron.cpp.s
 
 # Object files for target test_neuron
 test_neuron_OBJECTS = \
@@ -94,18 +94,18 @@ tests_c/test_neuron: tests_c/CMakeFiles/test_neuron.dir/test_neuron.cpp.o
 tests_c/test_neuron: tests_c/CMakeFiles/test_neuron.dir/build.make
 tests_c/test_neuron: libfcl_static.a
 tests_c/test_neuron: tests_c/CMakeFiles/test_neuron.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_neuron"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_neuron.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_neuron"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/tests_c && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_neuron.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests_c/CMakeFiles/test_neuron.dir/build: tests_c/test_neuron
 .PHONY : tests_c/CMakeFiles/test_neuron.dir/build
 
 tests_c/CMakeFiles/test_neuron.dir/clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c && $(CMAKE_COMMAND) -P CMakeFiles/test_neuron.dir/cmake_clean.cmake
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/tests_c && $(CMAKE_COMMAND) -P CMakeFiles/test_neuron.dir/cmake_clean.cmake
 .PHONY : tests_c/CMakeFiles/test_neuron.dir/clean
 
 tests_c/CMakeFiles/test_neuron.dir/depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/CMakeFiles/test_neuron.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/tests_c /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/tests_c /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/CMakeFiles/test_neuron.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : tests_c/CMakeFiles/test_neuron.dir/depend
 

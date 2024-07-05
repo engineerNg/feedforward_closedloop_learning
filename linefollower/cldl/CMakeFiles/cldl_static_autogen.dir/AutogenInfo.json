@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen",
-	"CMAKE_BINARY_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl",
+	"BUILD_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt",
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt",
 		"/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -33,45 +33,45 @@
 		"/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning",
-	"DEP_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning",
+	"DEP_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "cldl_static_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h",
 			"MU",
 			"EWIEGA46WW/moc_cldl_bandpass.cpp",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h",
 			"MU",
 			"EWIEGA46WW/moc_cldl_filterbank.cpp",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h",
 			"MU",
 			"EWIEGA46WW/moc_cldl_layer.cpp",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h",
 			"MU",
 			"EWIEGA46WW/moc_cldl_net.cpp",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h",
 			"MU",
 			"EWIEGA46WW/moc_cldl_neuron.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "_CRT_SECURE_NO_WARNINGS" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -82,7 +82,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl",
+		"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl",
 		"/usr/include/c++/14",
 		"/usr/include/c++/14/x86_64-redhat-linux",
 		"/usr/include/c++/14/backward",
@@ -102,41 +102,41 @@
 		"-c",
 		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib64/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib64/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.cpp",
+			"/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.cpp",
 			"MU",
 			null
 		]

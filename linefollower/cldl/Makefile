@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl//CMakeFiles/progress.marks
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles 0
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl//CMakeFiles/progress.marks
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/clean
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/preinstall
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/preinstall
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/cldl_static.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/cldl_static.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ cldl_static: linefollower/cldl/CMakeFiles/cldl_static.dir/rule
 
 # fast build rule for target.
 cldl_static/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/build
 .PHONY : cldl_static/fast
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ linefollowercldl: linefollower/cldl/CMakeFiles/linefollowercldl.dir/rule
 
 # fast build rule for target.
 linefollowercldl/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/build
 .PHONY : linefollowercldl/fast
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -200,12 +200,12 @@ cldl_static_autogen_timestamp_deps: linefollower/cldl/CMakeFiles/cldl_static_aut
 
 # fast build rule for target.
 cldl_static_autogen_timestamp_deps/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/build.make linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/build.make linefollower/cldl/CMakeFiles/cldl_static_autogen_timestamp_deps.dir/build
 .PHONY : cldl_static_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/rule
 
 # Convenience name for target.
@@ -214,12 +214,12 @@ cldl_static_autogen: linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/rule
 
 # fast build rule for target.
 cldl_static_autogen/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/build.make linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/build.make linefollower/cldl/CMakeFiles/cldl_static_autogen.dir/build
 .PHONY : cldl_static_autogen/fast
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -228,12 +228,12 @@ linefollowercldl_autogen_timestamp_deps: linefollower/cldl/CMakeFiles/linefollow
 
 # fast build rule for target.
 linefollowercldl_autogen_timestamp_deps/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build
 .PHONY : linefollowercldl_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/rule:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/rule
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/rule
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/rule
 
 # Convenience name for target.
@@ -242,7 +242,7 @@ linefollowercldl_autogen: linefollower/cldl/CMakeFiles/linefollowercldl_autogen.
 
 # fast build rule for target.
 linefollowercldl_autogen/fast:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build
 .PHONY : linefollowercldl_autogen/fast
 
 Linefollower.o: Linefollower.cpp.o
@@ -250,7 +250,7 @@ Linefollower.o: Linefollower.cpp.o
 
 # target to build an object file
 Linefollower.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o
 .PHONY : Linefollower.cpp.o
 
 Linefollower.i: Linefollower.cpp.i
@@ -258,7 +258,7 @@ Linefollower.i: Linefollower.cpp.i
 
 # target to preprocess a source file
 Linefollower.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i
 .PHONY : Linefollower.cpp.i
 
 Linefollower.s: Linefollower.cpp.s
@@ -266,7 +266,7 @@ Linefollower.s: Linefollower.cpp.s
 
 # target to generate assembly for a file
 Linefollower.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s
 .PHONY : Linefollower.cpp.s
 
 __/Racer.o: __/Racer.cpp.o
@@ -274,7 +274,7 @@ __/Racer.o: __/Racer.cpp.o
 
 # target to build an object file
 __/Racer.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o
 .PHONY : __/Racer.cpp.o
 
 __/Racer.i: __/Racer.cpp.i
@@ -282,7 +282,7 @@ __/Racer.i: __/Racer.cpp.i
 
 # target to preprocess a source file
 __/Racer.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i
 .PHONY : __/Racer.cpp.i
 
 __/Racer.s: __/Racer.cpp.s
@@ -290,7 +290,7 @@ __/Racer.s: __/Racer.cpp.s
 
 # target to generate assembly for a file
 __/Racer.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s
 .PHONY : __/Racer.cpp.s
 
 cldl_bandpass.o: cldl_bandpass.cpp.o
@@ -298,7 +298,7 @@ cldl_bandpass.o: cldl_bandpass.cpp.o
 
 # target to build an object file
 cldl_bandpass.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.o
 .PHONY : cldl_bandpass.cpp.o
 
 cldl_bandpass.i: cldl_bandpass.cpp.i
@@ -306,7 +306,7 @@ cldl_bandpass.i: cldl_bandpass.cpp.i
 
 # target to preprocess a source file
 cldl_bandpass.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.i
 .PHONY : cldl_bandpass.cpp.i
 
 cldl_bandpass.s: cldl_bandpass.cpp.s
@@ -314,7 +314,7 @@ cldl_bandpass.s: cldl_bandpass.cpp.s
 
 # target to generate assembly for a file
 cldl_bandpass.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.s
 .PHONY : cldl_bandpass.cpp.s
 
 cldl_filterbank.o: cldl_filterbank.cpp.o
@@ -322,7 +322,7 @@ cldl_filterbank.o: cldl_filterbank.cpp.o
 
 # target to build an object file
 cldl_filterbank.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.o
 .PHONY : cldl_filterbank.cpp.o
 
 cldl_filterbank.i: cldl_filterbank.cpp.i
@@ -330,7 +330,7 @@ cldl_filterbank.i: cldl_filterbank.cpp.i
 
 # target to preprocess a source file
 cldl_filterbank.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.i
 .PHONY : cldl_filterbank.cpp.i
 
 cldl_filterbank.s: cldl_filterbank.cpp.s
@@ -338,7 +338,7 @@ cldl_filterbank.s: cldl_filterbank.cpp.s
 
 # target to generate assembly for a file
 cldl_filterbank.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.s
 .PHONY : cldl_filterbank.cpp.s
 
 cldl_layer.o: cldl_layer.cpp.o
@@ -346,7 +346,7 @@ cldl_layer.o: cldl_layer.cpp.o
 
 # target to build an object file
 cldl_layer.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.o
 .PHONY : cldl_layer.cpp.o
 
 cldl_layer.i: cldl_layer.cpp.i
@@ -354,7 +354,7 @@ cldl_layer.i: cldl_layer.cpp.i
 
 # target to preprocess a source file
 cldl_layer.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.i
 .PHONY : cldl_layer.cpp.i
 
 cldl_layer.s: cldl_layer.cpp.s
@@ -362,7 +362,7 @@ cldl_layer.s: cldl_layer.cpp.s
 
 # target to generate assembly for a file
 cldl_layer.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_layer.cpp.s
 .PHONY : cldl_layer.cpp.s
 
 cldl_net.o: cldl_net.cpp.o
@@ -370,7 +370,7 @@ cldl_net.o: cldl_net.cpp.o
 
 # target to build an object file
 cldl_net.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.o
 .PHONY : cldl_net.cpp.o
 
 cldl_net.i: cldl_net.cpp.i
@@ -378,7 +378,7 @@ cldl_net.i: cldl_net.cpp.i
 
 # target to preprocess a source file
 cldl_net.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.i
 .PHONY : cldl_net.cpp.i
 
 cldl_net.s: cldl_net.cpp.s
@@ -386,7 +386,7 @@ cldl_net.s: cldl_net.cpp.s
 
 # target to generate assembly for a file
 cldl_net.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_net.cpp.s
 .PHONY : cldl_net.cpp.s
 
 cldl_neuron.o: cldl_neuron.cpp.o
@@ -394,7 +394,7 @@ cldl_neuron.o: cldl_neuron.cpp.o
 
 # target to build an object file
 cldl_neuron.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.o
 .PHONY : cldl_neuron.cpp.o
 
 cldl_neuron.i: cldl_neuron.cpp.i
@@ -402,7 +402,7 @@ cldl_neuron.i: cldl_neuron.cpp.i
 
 # target to preprocess a source file
 cldl_neuron.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.i
 .PHONY : cldl_neuron.cpp.i
 
 cldl_neuron.s: cldl_neuron.cpp.s
@@ -410,7 +410,7 @@ cldl_neuron.s: cldl_neuron.cpp.s
 
 # target to generate assembly for a file
 cldl_neuron.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_neuron.cpp.s
 .PHONY : cldl_neuron.cpp.s
 
 cldl_static_autogen/mocs_compilation.o: cldl_static_autogen/mocs_compilation.cpp.o
@@ -418,7 +418,7 @@ cldl_static_autogen/mocs_compilation.o: cldl_static_autogen/mocs_compilation.cpp
 
 # target to build an object file
 cldl_static_autogen/mocs_compilation.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.o
 .PHONY : cldl_static_autogen/mocs_compilation.cpp.o
 
 cldl_static_autogen/mocs_compilation.i: cldl_static_autogen/mocs_compilation.cpp.i
@@ -426,7 +426,7 @@ cldl_static_autogen/mocs_compilation.i: cldl_static_autogen/mocs_compilation.cpp
 
 # target to preprocess a source file
 cldl_static_autogen/mocs_compilation.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.i
 .PHONY : cldl_static_autogen/mocs_compilation.cpp.i
 
 cldl_static_autogen/mocs_compilation.s: cldl_static_autogen/mocs_compilation.cpp.s
@@ -434,7 +434,7 @@ cldl_static_autogen/mocs_compilation.s: cldl_static_autogen/mocs_compilation.cpp
 
 # target to generate assembly for a file
 cldl_static_autogen/mocs_compilation.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/cldl_static.dir/build.make linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.s
 .PHONY : cldl_static_autogen/mocs_compilation.cpp.s
 
 linefollowercldl_autogen/mocs_compilation.o: linefollowercldl_autogen/mocs_compilation.cpp.o
@@ -442,7 +442,7 @@ linefollowercldl_autogen/mocs_compilation.o: linefollowercldl_autogen/mocs_compi
 
 # target to build an object file
 linefollowercldl_autogen/mocs_compilation.cpp.o:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o
 .PHONY : linefollowercldl_autogen/mocs_compilation.cpp.o
 
 linefollowercldl_autogen/mocs_compilation.i: linefollowercldl_autogen/mocs_compilation.cpp.i
@@ -450,7 +450,7 @@ linefollowercldl_autogen/mocs_compilation.i: linefollowercldl_autogen/mocs_compi
 
 # target to preprocess a source file
 linefollowercldl_autogen/mocs_compilation.cpp.i:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i
 .PHONY : linefollowercldl_autogen/mocs_compilation.cpp.i
 
 linefollowercldl_autogen/mocs_compilation.s: linefollowercldl_autogen/mocs_compilation.cpp.s
@@ -458,7 +458,7 @@ linefollowercldl_autogen/mocs_compilation.s: linefollowercldl_autogen/mocs_compi
 
 # target to generate assembly for a file
 linefollowercldl_autogen/mocs_compilation.cpp.s:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(MAKE) $(MAKESILENT) -f linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s
 .PHONY : linefollowercldl_autogen/mocs_compilation.cpp.s
 
 # Help Target
@@ -517,6 +517,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

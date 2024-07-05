@@ -1,7 +1,7 @@
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.h \
  /usr/local/include/enki/robots/DifferentialWheeled.h \
  /usr/local/include/enki/PhysicalEngine.h \
  /usr/local/include/enki/Geometry.h /usr/include/c++/14/cmath \

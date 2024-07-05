@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Utility rule file for linefollowercldl_autogen.
 
@@ -71,9 +71,9 @@ linefollower/cldl/CMakeFiles/linefollowercldl_autogen: linefollower/cldl/linefol
 linefollower/cldl/linefollowercldl_autogen/timestamp: /usr/lib64/qt5/bin/moc
 linefollower/cldl/linefollowercldl_autogen/timestamp: /usr/lib64/qt5/bin/uic
 linefollower/cldl/linefollowercldl_autogen/timestamp: linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target linefollowercldl"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E cmake_autogen /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenInfo.json RelWithDebInfo
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E touch /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target linefollowercldl"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E cmake_autogen /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenInfo.json RelWithDebInfo
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E touch /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/timestamp
 
 linefollowercldl_autogen: linefollower/cldl/CMakeFiles/linefollowercldl_autogen
 linefollowercldl_autogen: linefollower/cldl/linefollowercldl_autogen/timestamp
@@ -85,10 +85,10 @@ linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build: linefollowercld
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/build
 
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl_autogen.dir/cmake_clean.cmake
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl_autogen.dir/cmake_clean.cmake
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/clean
 
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/depend
 

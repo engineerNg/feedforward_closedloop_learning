@@ -1,11 +1,11 @@
 tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/test_layer.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/test_layer.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/layer.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/layer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/neuron.h \
  /usr/include/c++/14/math.h /usr/include/c++/14/cmath \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -91,8 +91,8 @@ tests_c/CMakeFiles/test_layer.dir/test_layer.cpp.o: \
  /usr/include/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
  /usr/include/asm-generic/errno-base.h /usr/include/bits/types/error_t.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/neuron.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/../fcl/bandpass.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/tests_c/../fcl/bandpass.h \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/stl_algobase.h \
  /usr/include/c++/14/bits/functexcept.h \
  /usr/include/c++/14/bits/exception_defines.h \

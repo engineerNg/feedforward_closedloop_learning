@@ -52,6 +52,12 @@ public:
          **/
 	void doStep(const std::vector<double> &input, const std::vector<double> &error);
 
+	/** Performs the simulation step with backpropagation
+         * \param input Array with the input values
+         * \param error Array of the error signals
+         **/
+	void doStepBackProp(const std::vector<double> &input, const std::vector<double> &error);
+
 	/** Gets the output from one of the output neurons
          * \param index: The index number of the output neuron.
          * \return The output value of the output neuron.
@@ -150,6 +156,8 @@ private:
 	double learningRateDiscountFactor = 1;
 
 	long int step = 0;
+
+	double errorPrev = 0;
 
 	FCLLayer** layers;
 

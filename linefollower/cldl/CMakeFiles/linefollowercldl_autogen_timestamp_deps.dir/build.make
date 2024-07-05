@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Utility rule file for linefollowercldl_autogen_timestamp_deps.
 
@@ -66,11 +66,11 @@ include linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir
 # Include the progress variables for this target.
 include linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/progress.make
 
+linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: linefollower/cldl/libcldl_static.a
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: /usr/lib64/libQt5Widgets.so.5.15.13
+linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: /usr/lib64/libQt5OpenGL.so.5.15.13
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: /usr/lib64/qt5/bin/moc
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: /usr/lib64/qt5/bin/uic
-linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: /usr/lib64/libQt5OpenGL.so.5.15.13
-linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps: linefollower/cldl/libcldl_static.a
 
 linefollowercldl_autogen_timestamp_deps: linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps
 linefollowercldl_autogen_timestamp_deps: linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build.make
@@ -81,10 +81,10 @@ linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build: 
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/build
 
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/clean
 
 linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl_autogen_timestamp_deps.dir/depend
 

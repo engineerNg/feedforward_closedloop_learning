@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -D_CRT_SECURE_NO_WARNINGS
 
-CXX_INCLUDES = -I/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/include -I/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl
+CXX_INCLUDES = -I/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_static_autogen/include -I/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl
 
 CXX_FLAGS = -O2 -g -DNDEBUG -std=gnu++14 -fPIC -Wall -Wconversion -Wextra -pedantic
 

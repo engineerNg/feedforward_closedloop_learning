@@ -162,7 +162,9 @@ void FCLNeuron::doLearning() {
 			*weightschp = momentum * (*weightschp) +
 				(*inputsp) * error * learningRate * learningRateFactor -
 				(*weightsp) * decay * learningRate * fabs(error);
-			*weightsp =  (*weightsp) + *weightschp;
+			
+			/* Add a forget term 0.9999 to the weights. */
+			*weightsp = (*weightsp) + *weightschp;
 #ifdef DEBUG
 			if (isnan(sum) || isnan(weights[i]) || isnan(inputs[i]) || (fabs(sum)>SUM_ERR_THRES)) {
 				fprintf(stderr,"Out of range Neuron::%s step=%ld, L=%d, N=%d, %f, %f, %f, %d\n",
@@ -305,7 +307,8 @@ void FCLNeuron::initWeights( double _max,  int initBias, WeightInitMethod weight
 		max = fabs(_max);
 		break;
 	case MAX_OUTPUT_RANDOM:
-		max = fabs(_max) / ((double)(nInputs+nBias));
+        max = sqrt(6.0) / (10 + sqrt(nInputs + nBias+ 40));
+		// max = fabs(_max) / ((double)(nInputs+nBias));
 		break;
 	case MAX_OUTPUT_CONST:
 		max = _max / (nInputs+nBias);

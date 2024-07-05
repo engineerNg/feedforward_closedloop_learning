@@ -1,7 +1,7 @@
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/../Racer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/../Racer.h \
  /usr/local/include/enki/robots/DifferentialWheeled.h \
  /usr/local/include/enki/PhysicalEngine.h \
  /usr/local/include/enki/Geometry.h /usr/include/c++/14/cmath \
@@ -580,17 +580,17 @@ linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: \
  /usr/include/qt5/QtGui/qvector3d.h /usr/include/qt5/QtGui/qvector4d.h \
  /usr/include/qt5/QtGui/qwindowdefs.h \
  /usr/include/qt5/QtGui/qtguiversion.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h \
  /usr/include/c++/14/ctgmath /usr/include/c++/14/complex \
  /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
  /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/math.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h \
  /usr/local/include/viewer/Viewer.h /usr/include/qt5/QtOpenGL/QGLWidget \
  /usr/include/qt5/QtOpenGL/qgl.h /usr/include/qt5/QtWidgets/qwidget.h \
  /usr/include/qt5/QtWidgets/qsizepolicy.h \
@@ -600,4 +600,4 @@ linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: \
  /usr/include/qt5/QtCore/QPoint /usr/include/qt5/QtCore/QPointF \
  /usr/include/qt5/QtCore/QMap /usr/include/qt5/QtGui/QVector3D \
  /usr/include/qt5/QtCore/QUrl /usr/local/include/enki/Geometry.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/../Linefollower.h
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/../Linefollower.h

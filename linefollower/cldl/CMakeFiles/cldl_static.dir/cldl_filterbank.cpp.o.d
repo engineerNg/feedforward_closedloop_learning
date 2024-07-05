@@ -1,9 +1,9 @@
 linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_filterbank.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_layer.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -146,7 +146,7 @@ linefollower/cldl/CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.o: \
  /usr/include/c++/14/bits/stl_vector.h \
  /usr/include/c++/14/bits/stl_bvector.h \
  /usr/include/c++/14/bits/vector.tcc \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_net.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cldl_bandpass.h \
  /usr/include/c++/14/stdlib.h

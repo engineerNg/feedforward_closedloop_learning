@@ -1,4 +1,4 @@
-# Install script for directory: /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower
+# Install script for directory: /home/kinsley/github_project/feedforward_closedloop_learning/linefollower
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/cmake_install.cmake")
+  include("/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/cmake_install.cmake")
 
 endif()
 

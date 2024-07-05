@@ -1,4 +1,4 @@
-# Install script for directory: /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl
+# Install script for directory: /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

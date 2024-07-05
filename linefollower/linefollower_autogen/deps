@@ -1,9 +1,9 @@
 linefollower_autogen/timestamp: \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/CMakeLists.txt \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Linefollower.cpp \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Linefollower.h \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.h \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/CMakeLists.txt \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Linefollower.cpp \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Linefollower.h \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.h \
 	/usr/lib64/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake \

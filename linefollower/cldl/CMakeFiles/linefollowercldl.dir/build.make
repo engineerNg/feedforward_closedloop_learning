@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Include any dependencies generated for this target.
 include linefollower/cldl/CMakeFiles/linefollowercldl.dir/depend.make
@@ -72,51 +72,51 @@ include linefollower/cldl/CMakeFiles/linefollowercldl.dir/flags.make
 linefollower/cldl/linefollowercldl_autogen/timestamp: /usr/lib64/qt5/bin/moc
 linefollower/cldl/linefollowercldl_autogen/timestamp: /usr/lib64/qt5/bin/uic
 linefollower/cldl/linefollowercldl_autogen/timestamp: linefollower/cldl/CMakeFiles/linefollowercldl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target linefollowercldl"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E cmake_autogen /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenInfo.json RelWithDebInfo
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E touch /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target linefollowercldl"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E cmake_autogen /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl_autogen.dir/AutogenInfo.json RelWithDebInfo
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/cmake -E touch /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/timestamp
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/flags.make
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o: linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o -MF CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o -MF CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp > CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp > CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.i
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp -o CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/linefollowercldl_autogen/mocs_compilation.cpp -o CMakeFiles/linefollowercldl.dir/linefollowercldl_autogen/mocs_compilation.cpp.s
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/flags.make
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: linefollower/cldl/Linefollower.cpp
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o -MF CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o.d -o CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o -MF CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o.d -o CMakeFiles/linefollowercldl.dir/Linefollower.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp > CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp > CMakeFiles/linefollowercldl.dir/Linefollower.cpp.i
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp -o CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp -o CMakeFiles/linefollowercldl.dir/Linefollower.cpp.s
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/flags.make
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o: linefollower/Racer.cpp
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o: linefollower/cldl/CMakeFiles/linefollowercldl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o -MF CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o.d -o CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o -MF CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o.d -o CMakeFiles/linefollowercldl.dir/__/Racer.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp > CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp > CMakeFiles/linefollowercldl.dir/__/Racer.cpp.i
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp -o CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp -o CMakeFiles/linefollowercldl.dir/__/Racer.cpp.s
 
 # Object files for target linefollowercldl
 linefollowercldl_OBJECTS = \
@@ -139,18 +139,18 @@ linefollower/cldl/linefollowercldl: linefollower/cldl/libcldl_static.a
 linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Gui.so.5.15.13
 linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Core.so.5.15.13
 linefollower/cldl/linefollowercldl: linefollower/cldl/CMakeFiles/linefollowercldl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable linefollowercldl"
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linefollowercldl.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable linefollowercldl"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linefollowercldl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/build: linefollower/cldl/linefollowercldl
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl.dir/build
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/clean:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl.dir/cmake_clean.cmake
+	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -P CMakeFiles/linefollowercldl.dir/cmake_clean.cmake
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl.dir/clean
 
 linefollower/cldl/CMakeFiles/linefollowercldl.dir/depend: linefollower/cldl/linefollowercldl_autogen/timestamp
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeFiles/linefollowercldl.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : linefollower/cldl/CMakeFiles/linefollowercldl.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+# Install script for directory: /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/libfcl.so.2.2.0"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/libfcl.so.2"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/libfcl.so.2.2.0"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/libfcl.so.2"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libfcl.so.2.2.0"
@@ -72,49 +72,49 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/libfcl.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/home/kinsley/github_project/feedforward_closedloop_learning/libfcl.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/fcl" TYPE FILE FILES
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/bandpass.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/globals.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/bandpass.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/globals.h"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl_util.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl_util.h"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/libfcl_static.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/kinsley/github_project/feedforward_closedloop_learning/libfcl_static.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/fcl" TYPE FILE FILES
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/bandpass.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/globals.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/bandpass.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl/globals.h"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl.h"
-    "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl_util.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl.h"
+    "/home/kinsley/github_project/feedforward_closedloop_learning/fcl_util.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/tests_c/cmake_install.cmake")
-  include("/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cmake_install.cmake")
+  include("/home/kinsley/github_project/feedforward_closedloop_learning/tests_c/cmake_install.cmake")
+  include("/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cmake_install.cmake")
 
 endif()
 
@@ -126,5 +126,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kinsley/github_project/feedforward_closedloop_learning/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

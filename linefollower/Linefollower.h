@@ -1,8 +1,8 @@
 #ifndef LINEFOLLOWER_H
 #define LINEFOLLOWER_H
 
-const double speed = 90;
-const double fbgain = 300;
+const double speed = 60;
+const double fbgain = 200;
 
 const int nInputs = 30;
 
@@ -10,7 +10,10 @@ const int nInputs = 30;
 static constexpr int nLayers = 3;
 
 // The number of neurons in every layer
-const std::vector<int> nNeuronsInLayers = {9,6,6};
+const std::vector<int> nNeuronsInLayers = {12,20,1};
+
+// The number of neurons in every layer for model prediction
+const std::vector<int> nNeuronsInLayersBackProp = {10,9,9,1};
 
 // We set nFilters in the input
 const int nFiltersInput = 10;

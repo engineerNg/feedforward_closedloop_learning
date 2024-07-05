@@ -1,9 +1,9 @@
 CMakeFiles/fcl.dir/fcl/layer.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.h \
  /usr/include/c++/14/math.h /usr/include/c++/14/cmath \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \

@@ -51,6 +51,8 @@ public:
          **/
 	void doStep(const std::vector<double> &input, const std::vector<double> &error);
 
+	void doStepBackProp(const std::vector<double> &input, const std::vector<double> &error);
+
 	double getFilterOutput(int inputIdx, int filterIdx) {
 		const int idx = inputIdx * nFiltersPerInput + filterIdx;
 		assert((idx >= 0) || (idx < (nFiltersPerInput * nInputs)));

@@ -1,8 +1,8 @@
 linefollowercldl_autogen/timestamp: \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.h \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt \
-	/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.cpp \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.h \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/CMakeLists.txt \
+	/home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl/Linefollower.cpp \
 	/usr/lib64/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake \

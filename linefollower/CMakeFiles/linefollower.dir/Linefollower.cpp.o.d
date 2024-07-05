@@ -1,7 +1,7 @@
 linefollower/CMakeFiles/linefollower.dir/Linefollower.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Linefollower.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Linefollower.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Racer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Racer.h \
  /usr/local/include/enki/robots/DifferentialWheeled.h \
  /usr/local/include/enki/PhysicalEngine.h \
  /usr/local/include/enki/Geometry.h /usr/include/c++/14/cmath \
@@ -581,16 +581,16 @@ linefollower/CMakeFiles/linefollower.dir/Linefollower.cpp.o: \
  /usr/include/qt5/QtGui/qvector3d.h /usr/include/qt5/QtGui/qvector4d.h \
  /usr/include/qt5/QtGui/qwindowdefs.h \
  /usr/include/qt5/QtGui/qtguiversion.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl_util.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/layer.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/globals.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl_util.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/layer.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/neuron.h \
  /usr/include/c++/14/math.h /usr/include/c++/14/thread \
  /usr/include/c++/14/bits/this_thread_sleep.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/neuron.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl/bandpass.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/../fcl.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl/bandpass.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/../fcl.h \
  /usr/local/include/viewer/Viewer.h /usr/include/qt5/QtOpenGL/QGLWidget \
  /usr/include/qt5/QtOpenGL/qgl.h /usr/include/qt5/QtWidgets/qwidget.h \
  /usr/include/qt5/QtWidgets/qsizepolicy.h \
@@ -600,4 +600,4 @@ linefollower/CMakeFiles/linefollower.dir/Linefollower.cpp.o: \
  /usr/include/qt5/QtCore/QPoint /usr/include/qt5/QtCore/QPointF \
  /usr/include/qt5/QtCore/QMap /usr/include/qt5/QtGui/QVector3D \
  /usr/include/qt5/QtCore/QUrl /usr/local/include/enki/Geometry.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/linefollower/Linefollower.h
+ /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/Linefollower.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_SOURCE_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning
+CMAKE_BINARY_DIR = /home/kinsley/github_project/feedforward_closedloop_learning
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fcl_static.dir/depend.make
@@ -72,72 +72,72 @@ include CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o: CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o: fcl/neuron.cpp
 CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o: CMakeFiles/fcl_static.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/neuron.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.cpp
 
 CMakeFiles/fcl_static.dir/fcl/neuron.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fcl_static.dir/fcl/neuron.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.cpp > CMakeFiles/fcl_static.dir/fcl/neuron.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.cpp > CMakeFiles/fcl_static.dir/fcl/neuron.cpp.i
 
 CMakeFiles/fcl_static.dir/fcl/neuron.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fcl_static.dir/fcl/neuron.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.cpp -o CMakeFiles/fcl_static.dir/fcl/neuron.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.cpp -o CMakeFiles/fcl_static.dir/fcl/neuron.cpp.s
 
 CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o: CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o: fcl/bandpass.cpp
 CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o: CMakeFiles/fcl_static.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/bandpass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/fcl/bandpass.cpp
 
 CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/bandpass.cpp > CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/fcl/bandpass.cpp > CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.i
 
 CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/bandpass.cpp -o CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/fcl/bandpass.cpp -o CMakeFiles/fcl_static.dir/fcl/bandpass.cpp.s
 
 CMakeFiles/fcl_static.dir/fcl/layer.cpp.o: CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl/layer.cpp.o: fcl/layer.cpp
 CMakeFiles/fcl_static.dir/fcl/layer.cpp.o: CMakeFiles/fcl_static.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fcl_static.dir/fcl/layer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/layer.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/layer.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/layer.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fcl_static.dir/fcl/layer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl/layer.cpp.o -MF CMakeFiles/fcl_static.dir/fcl/layer.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl/layer.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.cpp
 
 CMakeFiles/fcl_static.dir/fcl/layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fcl_static.dir/fcl/layer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.cpp > CMakeFiles/fcl_static.dir/fcl/layer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.cpp > CMakeFiles/fcl_static.dir/fcl/layer.cpp.i
 
 CMakeFiles/fcl_static.dir/fcl/layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fcl_static.dir/fcl/layer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/layer.cpp -o CMakeFiles/fcl_static.dir/fcl/layer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/fcl/layer.cpp -o CMakeFiles/fcl_static.dir/fcl/layer.cpp.s
 
 CMakeFiles/fcl_static.dir/fcl.cpp.o: CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl.cpp.o: fcl.cpp
 CMakeFiles/fcl_static.dir/fcl.cpp.o: CMakeFiles/fcl_static.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fcl_static.dir/fcl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl.cpp.o -MF CMakeFiles/fcl_static.dir/fcl.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fcl_static.dir/fcl.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl.cpp.o -MF CMakeFiles/fcl_static.dir/fcl.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/fcl.cpp
 
 CMakeFiles/fcl_static.dir/fcl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fcl_static.dir/fcl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl.cpp > CMakeFiles/fcl_static.dir/fcl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/fcl.cpp > CMakeFiles/fcl_static.dir/fcl.cpp.i
 
 CMakeFiles/fcl_static.dir/fcl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fcl_static.dir/fcl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl.cpp -o CMakeFiles/fcl_static.dir/fcl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/fcl.cpp -o CMakeFiles/fcl_static.dir/fcl.cpp.s
 
 CMakeFiles/fcl_static.dir/fcl_util.cpp.o: CMakeFiles/fcl_static.dir/flags.make
 CMakeFiles/fcl_static.dir/fcl_util.cpp.o: fcl_util.cpp
 CMakeFiles/fcl_static.dir/fcl_util.cpp.o: CMakeFiles/fcl_static.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fcl_static.dir/fcl_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl_util.cpp.o -MF CMakeFiles/fcl_static.dir/fcl_util.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl_util.cpp.o -c /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fcl_static.dir/fcl_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fcl_static.dir/fcl_util.cpp.o -MF CMakeFiles/fcl_static.dir/fcl_util.cpp.o.d -o CMakeFiles/fcl_static.dir/fcl_util.cpp.o -c /home/kinsley/github_project/feedforward_closedloop_learning/fcl_util.cpp
 
 CMakeFiles/fcl_static.dir/fcl_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fcl_static.dir/fcl_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl_util.cpp > CMakeFiles/fcl_static.dir/fcl_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinsley/github_project/feedforward_closedloop_learning/fcl_util.cpp > CMakeFiles/fcl_static.dir/fcl_util.cpp.i
 
 CMakeFiles/fcl_static.dir/fcl_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fcl_static.dir/fcl_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl_util.cpp -o CMakeFiles/fcl_static.dir/fcl_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinsley/github_project/feedforward_closedloop_learning/fcl_util.cpp -o CMakeFiles/fcl_static.dir/fcl_util.cpp.s
 
 # Object files for target fcl_static
 fcl_static_OBJECTS = \
@@ -157,7 +157,7 @@ libfcl_static.a: CMakeFiles/fcl_static.dir/fcl.cpp.o
 libfcl_static.a: CMakeFiles/fcl_static.dir/fcl_util.cpp.o
 libfcl_static.a: CMakeFiles/fcl_static.dir/build.make
 libfcl_static.a: CMakeFiles/fcl_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libfcl_static.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libfcl_static.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/fcl_static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fcl_static.dir/link.txt --verbose=$(VERBOSE)
 
@@ -170,6 +170,6 @@ CMakeFiles/fcl_static.dir/clean:
 .PHONY : CMakeFiles/fcl_static.dir/clean
 
 CMakeFiles/fcl_static.dir/depend:
-	cd /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/CMakeFiles/fcl_static.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kinsley/github_project/feedforward_closedloop_learning && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning /home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles/fcl_static.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/fcl_static.dir/depend
 

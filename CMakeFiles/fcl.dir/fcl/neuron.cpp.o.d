@@ -1,7 +1,7 @@
 CMakeFiles/fcl.dir/fcl/neuron.cpp.o: \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.cpp \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.cpp \
  /usr/include/stdc-predef.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/neuron.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/neuron.h \
  /usr/include/c++/14/math.h /usr/include/c++/14/cmath \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -50,5 +50,5 @@ CMakeFiles/fcl.dir/fcl/neuron.cpp.o: \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/stdio.h \
  /usr/include/assert.h \
- /home/kinsley/OneDrive/study/final_project/feedforward_closedloop_learning/fcl/globals.h \
+ /home/kinsley/github_project/feedforward_closedloop_learning/fcl/globals.h \
  /usr/include/c++/14/stdlib.h /usr/include/c++/14/cstdlib

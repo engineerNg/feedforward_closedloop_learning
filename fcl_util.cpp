@@ -101,3 +101,35 @@ void FeedforwardClosedloopLearningWithFilterbank::doStep(const std::vector<doubl
 	}
 	FeedforwardClosedloopLearning::doStep(filterbankOutputs, errors);
 }
+
+
+void FeedforwardClosedloopLearningWithFilterbank::doStepBackProp(const std::vector<double> &input,
+							 const std::vector<double> &error) {
+	if (input.size() != (unsigned)nInputs) {
+		char tmp[256];
+		sprintf(tmp,"Input array dim mismatch: got: %ld, want: %d.",input.size(),nInputs);
+		#ifdef DEBUG
+		fprintf(stderr,"%s\n",tmp);
+		#endif
+		throw tmp;
+	}
+	if (error.size() != (unsigned)nInputs) {
+		char tmp[256];
+		sprintf(tmp,
+			"Error array dim mismatch: got: %ld, want: %d "
+			"which is the number of inputs.",
+			error.size(),nInputs);
+		#ifdef DEBUG
+		fprintf(stderr,"%s\n",tmp);
+		#endif
+		throw tmp;
+	}
+	
+	for(int i=0;i<nInputs;i++) {
+		for(int j=0;j<nFiltersPerInput;j++) {
+			filterbankOutputs[i*nFiltersPerInput+j] = bandpass[i][j]->filter(input[i]);
+			errors[i*nFiltersPerInput+j] = error[i];
+		}
+	}
+	FeedforwardClosedloopLearning::doStepBackProp(filterbankOutputs, errors);
+}
