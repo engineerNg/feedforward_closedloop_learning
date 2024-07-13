@@ -6,13 +6,16 @@ classdef NeuralNetwork
         weights;
         biases;
         savedWeights;
+        momentum;
+        lastWeights;
     end
     
     methods
-        function obj = NeuralNetwork(layers, activationFunctions, learningRate)
+        function obj = NeuralNetwork(layers, activationFunctions, learningRate, momentum)
             obj.layers = layers;
             obj.activationFunctions = activationFunctions;
             obj.learningRate = learningRate;
+            obj.momentum = momentum;
             obj = obj.initializeWeights();
         end
         
@@ -20,12 +23,15 @@ classdef NeuralNetwork
             num_layers = length(obj.layers);
             obj.weights = cell(num_layers - 1, 1);
             obj.biases = cell(num_layers - 1, 1);
+            obj.lastWeights = cell(num_layers - 1, 1);
+
             epsilon = 1e-6;
             for i = 1:num_layers - 1
                 nInputs = obj.layers(i);
                 nOutputs = obj.layers(i+1);
                 max_val = 1/(10 * nInputs); % Adjusted formula based on your description
                 obj.weights{i} = (2 * rand(nOutputs, nInputs) - 1) * max_val;
+                obj.lastWeights{i} = zeros(nOutputs, nInputs);
                 obj.biases{i} = zeros(nOutputs, 1); % You can adjust bias initialization as needed
             end
         end
@@ -49,7 +55,8 @@ classdef NeuralNetwork
             delta = error;
             for i = 1:length(obj.layers) - 1
                 grad_w = delta .* activations{i}';
-                obj.weights{i} = obj.weights{i} + obj.learningRate .* grad_w;
+                obj.weights{i} = obj.weights{i} + obj.learningRate .* grad_w + obj.momentum .* obj.lastWeights{i};
+                obj.lastWeights{i} = obj.learningRate .* grad_w;
                 % obj.weights{i} = obj.weights{i} + 0.05;
             end
         end
