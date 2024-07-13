@@ -99,88 +99,16 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 		throw tmp;
 	}
 
-	// we set the input to the input layer
-	layers[0]->setInputs(input.data());
-	// ..and calc its output
-	layers[0]->calcOutputs();
-	// new lets calc the other outputs
+	doLearning();
 
-	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
-		FCLLayer* emitterLayer = layers[k-1];
-		FCLLayer* receiverLayer = layers[k];
-		// now that we have the outputs from the previous layer
-		// we can shovel them into the next layer
-		for(int j=0;j<emitterLayer->getNneurons();j++) {
-			// get the output of a neuron in the input layer
-			double v = emitterLayer->getNeuron(j)->getOutput();
-			// set that output as an input to the next layer which
-			// is distributed to all neurons
-			receiverLayer->setInput(j,v);
-		}
-		
-		// now let's calc the output which can then be sent out
-		receiverLayer->calcOutputs();
-	}
-
-	// the error is injected into the 1st layer!
 	for(int i=0;i<(layers[0]->getNneurons());i++) {
 		layers[0]->getNeuron(i)->setError(error[i]);
 	}
-	// for(int i=0;i<(getOutputLayer()->getNneurons());i++) {
-	// 	getOutputLayer()->getNeuron(i)->setError(error[i]);
-	// }
-
-	//printf(stderr, "%e ", getLayer(0)->getNeuron(0)->getOutput());
-	// double err = error[0];
-
-	// err = err - errorPrev;
 
 	// Errors update.
-	// for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
 	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
 		FCLLayer* emitterLayer = layers[k-1];
 		FCLLayer* receiverLayer = layers[k];
-
-		// /* Apply layer normalization. */
-		// /* First calculate mean here. */
-		// std::vector<double> errorFromEmitterLayer;
-		// errorFromEmitterLayer.resize(emitterLayer->getNneurons());
-		// std::vector<double> normalizedErr(errorFromEmitterLayer.size());
-
-		// for (int i = 0; i < emitterLayer->getNneurons(); i++)
-		// {
-		// 	errorFromEmitterLayer[i] = emitterLayer->getNeuron(i)->getError();
-		// }
-
-		// /* Only applied to Hidden layers and output layer. */
-		// if (k >= 2)
-		// {
-		// 	double mean = std::accumulate(errorFromEmitterLayer.begin(), 
-		// 				errorFromEmitterLayer.end(), 0.0) / errorFromEmitterLayer.size();
-
-		// 	/* Then, calculate variable. */
-		// 	double sum = 0.0;
-
-		// 	for (double val : errorFromEmitterLayer)
-		// 	{
-		// 		sum += (val - mean) * (val - mean);
-		// 	}
-
-		// 	double std_dev = std::sqrt(sum / errorFromEmitterLayer.size() + 0.0005);
-			
-		// 	/* Finally calculate normalization. */
-		// 	for (int i = 0; i < errorFromEmitterLayer.size(); i++) 
-		// 	{
-		// 		normalizedErr[i] = (errorFromEmitterLayer[i] - mean) / std_dev;
-		// 	}
-		// }
-		// else
-		// {
-		// 	for (int i = 0; i < errorFromEmitterLayer.size(); i++) 
-		// 	{
-		// 		normalizedErr[i] = errorFromEmitterLayer[i];
-		// 	}
-		// }
 		
 		/* Calculate the errors for the hidden layer and output layer. */
 		for(int i=0;i<receiverLayer->getNneurons();i++) 
@@ -190,13 +118,15 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 			double l2Norm = 0;
 			double absError = 0;
 
+			int sign = 0;
+			double errLimited = 0;
+
 			// Vinilla Hebbian learning.
 			double _output = 0;
 
 			for(int j=0;j<emitterLayer->getNneurons();j++)
 			{
-				// err = err + receiverLayer->getNeuron(j)->getWeight(i) *
-				// 	emitterLayer->getNeuron(j)->getError();
+				err = error[0];
 
 				// err = err + receiverLayer->getNeuron(i)->getWeight(j) *
 				// 	emitterLayer->getNeuron(j)->getError();
@@ -205,13 +135,6 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 
 				// l2Norm += receiverLayer->getNeuron(i)->getWeight(j) * 
 				// 	receiverLayer->getNeuron(i)->getWeight(j);
-				
-				// absError = absError + fabs(emitterLayer->getNeuron(j)->getError());
-
-				// err = err + receiverLayer->getNeuron(i)	->getWeight(j) *
-				// 	normalizedErr[j];	
-
-				err = error[0];
 
 #ifdef DEBUG
 				if (isnan(err) || (fabs(err)>10000) || (fabs(emitterLayer->getNeuron(j)->getError())>10000)) {
@@ -259,15 +182,183 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 			/* Vanilla Hebbian Learning */
 			_output = receiverLayer->getNeuron(i)->getOutput();
 
-			//err = _output * (err/(fabs(err)+0.000001));
+			sign = (err > 0) ? 1 : ((err < 0) ? -1 : 0);
 
-			receiverLayer->getNeuron(i)->setError(err);
+			errLimited = (err > 0.01) ? 0.01: ((err < -0.01) ? -0.01: err); 
+
+			receiverLayer->getNeuron(i)->setError(errLimited * 10);
 		}
 	}
+
+	// we set the input to the input layer
+	layers[0]->setInputs(input.data());
+	// ..and calc its output
+	layers[0]->calcOutputs();
+	// new lets calc the other outputs
+
+	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
+		FCLLayer* emitterLayer = layers[k-1];
+		FCLLayer* receiverLayer = layers[k];
+		// now that we have the outputs from the previous layer
+		// we can shovel them into the next layer
+		for(int j=0;j<emitterLayer->getNneurons();j++) {
+			// get the output of a neuron in the input layer
+			double v = emitterLayer->getNeuron(j)->getOutput();
+			// set that output as an input to the next layer which
+			// is distributed to all neurons
+			receiverLayer->setInput(j,v);
+		}
+		
+		// now let's calc the output which can then be sent out
+		receiverLayer->calcOutputs();
+	}
+
+	// the error is injected into the 1st layer!
+// 	for(int i=0;i<(layers[0]->getNneurons());i++) {
+// 		layers[0]->getNeuron(i)->setError(error[i]);
+// 	}
+// 	// for(int i=0;i<(getOutputLayer()->getNneurons());i++) {
+// 	// 	getOutputLayer()->getNeuron(i)->setError(error[i]);
+// 	// }
+
+// 	//printf(stderr, "%e ", getLayer(0)->getNeuron(0)->getOutput());
+// 	// double err = error[0];
+
+// 	// err = err - errorPrev;
+
+// 	// Errors update.
+// 	// for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
+// 	for (unsigned k=1; k<n_neurons_per_layer.size(); k++) {
+// 		FCLLayer* emitterLayer = layers[k-1];
+// 		FCLLayer* receiverLayer = layers[k];
+
+// 		// /* Apply layer normalization. */
+// 		// /* First calculate mean here. */
+// 		// std::vector<double> errorFromEmitterLayer;
+// 		// errorFromEmitterLayer.resize(emitterLayer->getNneurons());
+// 		// std::vector<double> normalizedErr(errorFromEmitterLayer.size());
+
+// 		// for (int i = 0; i < emitterLayer->getNneurons(); i++)
+// 		// {
+// 		// 	errorFromEmitterLayer[i] = emitterLayer->getNeuron(i)->getError();
+// 		// }
+
+// 		// /* Only applied to Hidden layers and output layer. */
+// 		// if (k >= 2)
+// 		// {
+// 		// 	double mean = std::accumulate(errorFromEmitterLayer.begin(), 
+// 		// 				errorFromEmitterLayer.end(), 0.0) / errorFromEmitterLayer.size();
+
+// 		// 	/* Then, calculate variable. */
+// 		// 	double sum = 0.0;
+
+// 		// 	for (double val : errorFromEmitterLayer)
+// 		// 	{
+// 		// 		sum += (val - mean) * (val - mean);
+// 		// 	}
+
+// 		// 	double std_dev = std::sqrt(sum / errorFromEmitterLayer.size() + 0.0005);
+			
+// 		// 	/* Finally calculate normalization. */
+// 		// 	for (int i = 0; i < errorFromEmitterLayer.size(); i++) 
+// 		// 	{
+// 		// 		normalizedErr[i] = (errorFromEmitterLayer[i] - mean) / std_dev;
+// 		// 	}
+// 		// }
+// 		// else
+// 		// {
+// 		// 	for (int i = 0; i < errorFromEmitterLayer.size(); i++) 
+// 		// 	{
+// 		// 		normalizedErr[i] = errorFromEmitterLayer[i];
+// 		// 	}
+// 		// }
+		
+// 		/* Calculate the errors for the hidden layer and output layer. */
+// 		for(int i=0;i<receiverLayer->getNneurons();i++) 
+// 		{
+// 			double err = 0;
+// 			double l1Norm = 0;
+// 			double l2Norm = 0;
+// 			double absError = 0;
+
+// 			// Vinilla Hebbian learning.
+// 			double _output = 0;
+
+// 			for(int j=0;j<emitterLayer->getNneurons();j++)
+// 			{
+// 				// err = err + receiverLayer->getNeuron(j)->getWeight(i) *
+// 				// 	emitterLayer->getNeuron(j)->getError();
+
+// 				// err = err + receiverLayer->getNeuron(i)->getWeight(j) *
+// 				// 	emitterLayer->getNeuron(j)->getError();
+
+// 				// l1Norm += fabs(receiverLayer->getNeuron(i)->getWeight(j));
+
+// 				// l2Norm += receiverLayer->getNeuron(i)->getWeight(j) * 
+// 				// 	receiverLayer->getNeuron(i)->getWeight(j);
+				
+// 				// absError = absError + fabs(emitterLayer->getNeuron(j)->getError());
+
+// 				// err = err + receiverLayer->getNeuron(i)	->getWeight(j) *
+// 				// 	normalizedErr[j];	
+
+// 				err = error[0];
+
+// #ifdef DEBUG
+// 				if (isnan(err) || (fabs(err)>10000) || (fabs(emitterLayer->getNeuron(j)->getError())>10000)) {
+// 					printf("RANGE! FeedforwardClosedloopLearning::%s, step=%ld, j=%d, i=%d, hidLayerIndex=%d, "
+// 					       "err=%e, emitterLayer->getNeuron(j)->getError()=%e\n",
+// 					       __func__,step,j,i,k,err,emitterLayer->getNeuron(j)->getError());
+// 				}
+// #endif
+
+// 			}
+// 			/* Let error signals in all layer remain the same --  */
+// 			/* equal to the raw one. */
+// 			// err = err / emitterLayer->getNneurons();
+
+// 			// err = err - errorPrev;
+
+// 			/* learningRateDiscountFactor = 1 in this case. */
+// 			// err = err * learningRateDiscountFactor;
+
+// 			/* Norm term. */
+// 			// 1. L1 norm.
+// 			// err = err / l1Norm;
+			
+// 			// 2. L2 norm.
+// 			// l2Norm = sqrt(l2Norm);
+// 			// err = err / l2Norm;
+			 
+// 			// 3. Summation of N neurons.
+// 			// err = err * emitterLayer->getNneurons();
+
+// 			// 4. Use weight distance change in a step to limit the saturation.
+// 			// weightPrev = 
+
+// 			/*********************************************************/
+			
+// 			/* Limitation of saturation. */
+// 			// 1. dActivation. 
+// 			// err = err * receiverLayer->getNeuron(i)->dActivation();			
+			
+// 			// 2. Summation of absolute error of previous neurons.   
+// 			// err = err * absError;
+
+// 			/*********************************************************/
+
+// 			/* Vanilla Hebbian Learning */
+// 			// _output = receiverLayer->getNeuron(i)->getOutput();
+
+// 			//err = _output * (err/(fabs(err)+0.000001));
+
+// 			receiverLayer->getNeuron(i)->setError(err);
+// 		}
+// 	}
 	//fprintf(stderr, "%ld %e ", step, err);
 	// errorPrev = err;
 
-	doLearning();
+	// doLearning();
 	setStep();
 	step++;
 }

@@ -34,7 +34,7 @@ double	maxy = 300;
 #define STEPS_BELOW_ERR_THRESHOLD 100000
 
 // max number of steps to terminate
-#define MAX_STEPS 200000
+#define MAX_STEPS 30000 //200000
 
 // terminates if the agent won't turn after these steps
 #define STEPS_OFF_TRACK 1000

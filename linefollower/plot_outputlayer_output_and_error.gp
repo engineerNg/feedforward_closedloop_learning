@@ -29,7 +29,6 @@
 plot 'flog.tsv' using ($0):1 with lines title 'error', \
      'flog.tsv' using ($0):2 with lines title 'real error', \
      'flog.tsv' using ($0):3 with lines title 'output', \
-     'flog.tsv' using ($0):4 with lines title 'weight layer_0', \
      'flog.tsv' using ($0):5 with lines title 'weight layer_1', \
      'flog.tsv' using ($0):6 with lines title 'weight layer_output'
 
@@ -37,8 +36,6 @@ plot 'flog.tsv' using ($0):1 with lines title 'error', \
 
 
 # pause -1 "Fuck!"
-set title "Plot of Output Layer!"
-set output
 
 #plot 'flog.tsv' using ($0):37 with lines title 'v_i', \
 #     'flog.tsv' using ($0):38 with lines title 'e_i', \

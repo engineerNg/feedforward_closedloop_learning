@@ -147,7 +147,6 @@ public:
 	// as an example: line following and obstacle avoidance
 	virtual void sceneCompletedHook()
 	{
-		
 		// These 4 variables are for reflex loop.  
 		double leftGround = racer->groundSensorLeft.getValue();
 		double rightGround = racer->groundSensorRight.getValue();
@@ -188,15 +187,17 @@ public:
 			nn_control->setLearningRate(learningRate);
 		}
 
-
-		// fprintf(stderr,"%e %e %e %e ",leftGround,rightGround,leftGround2,rightGround2);
+		fprintf(stderr,"%e %e %e %e ",leftGround,rightGround,leftGround2,rightGround2);
 		for(int i=0;i<racer->getNsensors();i++) {
 			pred[i] = -(racer->getSensorArrayValue(i))*10;
 			// workaround of a bug in Enki
 			if (pred[i]<0) pred[i] = 0;
 			//if (i>=racer->getNsensors()/2) fprintf(stderr,"%e ",pred[i]);
 		}
+
+		/* When the robot is on track, sensors capture a large value, vise versa. */ 
 		double error = (leftGround+leftGround2*2)-(rightGround+rightGround2*2);
+		fprintf(stderr, "%e ", error);
 
 		//fprintf(stderr,"%e %e %e %e ",pred[0], pred[14], pred[15], pred[29]);
 
