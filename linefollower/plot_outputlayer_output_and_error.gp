@@ -29,8 +29,21 @@
 plot 'flog.tsv' using ($0):1 with lines title 'error', \
      'flog.tsv' using ($0):2 with lines title 'real error', \
      'flog.tsv' using ($0):3 with lines title 'output', \
-     'flog.tsv' using ($0):5 with lines title 'weight layer_1', \
-     'flog.tsv' using ($0):6 with lines title 'weight layer_output'
+     'flog.tsv' using ($0):4 with lines title 'filter0', \
+     'flog.tsv' using ($0):5 with lines title 'filter2', \
+     'flog.tsv' using ($0):6 with lines title 'filter4',\
+     'flog.tsv' using ($0):7 with lines title 'filter6', \
+     'flog.tsv' using ($0):8 with lines title 'filter8', \
+     'flog.tsv' using ($0):9 with lines title 'original', \
+     'flog.tsv' using ($0):10 with lines title 'filter0', \
+     'flog.tsv' using ($0):11 with lines title 'filter2', \
+     'flog.tsv' using ($0):12 with lines title 'filter4',\
+     'flog.tsv' using ($0):13 with lines title 'filter6', \
+     'flog.tsv' using ($0):14 with lines title 'filter8', \
+     'flog.tsv' using ($0):15 with lines title 'original'
+#     'flog.tsv' using ($0):10 with lines title 'weight layer1', \
+#     'flog.tsv' using ($0):11 with lines title 'weight layer2', \
+#     'flog.tsv' using ($0):12 with lines title 'weight layer_output'
 
 
 

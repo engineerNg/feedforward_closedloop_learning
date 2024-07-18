@@ -133,11 +133,11 @@ linefollower/cldl/linefollowercldl: linefollower/cldl/CMakeFiles/linefollowercld
 linefollower/cldl/linefollowercldl: linefollower/cldl/CMakeFiles/linefollowercldl.dir/build.make
 linefollower/cldl/linefollowercldl: /usr/lib64/libOpenGL.so
 linefollower/cldl/linefollowercldl: /usr/lib64/libGLX.so
-linefollower/cldl/linefollowercldl: /usr/lib64/libQt5OpenGL.so.5.15.13
-linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Widgets.so.5.15.13
+linefollower/cldl/linefollowercldl: /usr/lib64/libQt5OpenGL.so.5.15.14
+linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Widgets.so.5.15.14
 linefollower/cldl/linefollowercldl: linefollower/cldl/libcldl_static.a
-linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Gui.so.5.15.13
-linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Core.so.5.15.13
+linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Gui.so.5.15.14
+linefollower/cldl/linefollowercldl: /usr/lib64/libQt5Core.so.5.15.14
 linefollower/cldl/linefollowercldl: linefollower/cldl/CMakeFiles/linefollowercldl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kinsley/github_project/feedforward_closedloop_learning/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable linefollowercldl"
 	cd /home/kinsley/github_project/feedforward_closedloop_learning/linefollower/cldl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linefollowercldl.dir/link.txt --verbose=$(VERBOSE)

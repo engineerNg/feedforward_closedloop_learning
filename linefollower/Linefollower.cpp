@@ -90,6 +90,8 @@ public:
 			minT,
 			maxT);
 
+		
+
 		nn_control = new FeedforwardClosedloopLearningWithFilterbank(
 			nInputs,
 			nNeuronsInLayers,
@@ -252,6 +254,7 @@ public:
 
 
 		fcl->doStep(pred,err);
+		// fcl->doStepBackProp(pred,err);
 				
 		// weightChange -= weightSum;
 
@@ -342,10 +345,26 @@ public:
 
 
 		fprintf(flog, "\t%e", fcl->getOutputLayer()->getOutput(0));
+
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(40));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(41));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(42));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(43));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(44));
+		fprintf(flog, "\t%e", pred[4]);
+
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(100));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(102));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(104));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(106));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(108));
+		fprintf(flog, "\t%e", pred[10]);
+
+
 		// fprintf(flog, "\t%e", nn_control->getOutputLayer()->getOutput(0));
 
 
-		// fprintf(flog, "\t%e", fcl->getLayer(0)->getWeightDistanceFromInitialWeights());
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getWeightDistanceFromInitialWeights());
 		fprintf(flog, "\t%e", fcl->getLayer(1)->getWeightDistanceFromInitialWeights());
 
 		// fprintf(flog, "\t%e", 0);
@@ -468,6 +487,7 @@ int main(int argc, char *argv[]) {
 	switch (n) {
 	case 0:
 		singleRun(argc,argv,0.001f);
+		// singleRun(argc,argv,0.0f);
 		// singleRun(argc,argv,0.00025f);
 		break;
 	case 1:
