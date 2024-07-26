@@ -47,7 +47,7 @@ try:
     while True:
         # 读取数据文件，只提取第一行
         data = np.loadtxt(file_path)
-        first_row = data[11, :]  # 提取第一行的前 150 个数据
+        first_row = data[11, :75]  # 提取第一行的前 150 个数据
 
         # 创建 X 和 y
         X = np.arange(1, len(first_row) + 1).reshape(-1, 1)  # 横坐标 1 到 150

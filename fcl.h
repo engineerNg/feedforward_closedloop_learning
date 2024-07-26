@@ -159,6 +159,8 @@ private:
 
 	double errorPrev = 0;
 
+	double errorPrevPrev = 0;
+
 	FCLLayer** layers;
 
 	// should be called to relay layer index to the layer

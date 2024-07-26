@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
+#include <vector>
 
 /**
  * GNU GENERAL PUBLIC LICENSE
@@ -152,7 +153,9 @@ void FCLNeuron::doLearning() {
 	double* weightsp = weights;
 	double* weightschp = weightChange;
 	unsigned char * maskp = mask;
-	maxDet = 0;
+	std::vector<double> weightChangeArray(nInputs, 0.0);
+	const int nFilterGroup = 5;
+
 	for(int i=0;i<nInputs;i++) {
 		assert((mask+i) == maskp);
 		assert((weights+i) == weightsp);
@@ -162,9 +165,9 @@ void FCLNeuron::doLearning() {
 			*weightschp = momentum * (*weightschp) +
 				(*inputsp) * error * learningRate * learningRateFactor -
 				(*weightsp) * decay * learningRate * fabs(error);
-			
+			// *weightsp = *weightsp + *weightschp;
+
 			/* Add a forget term 0.9999 to the weights. */
-			*weightsp = (*weightsp) + *weightschp;
 #ifdef DEBUG
 			if (isnan(sum) || isnan(weights[i]) || isnan(inputs[i]) || (fabs(sum)>SUM_ERR_THRES)) {
 				fprintf(stderr,"Out of range Neuron::%s step=%ld, L=%d, N=%d, %f, %f, %f, %d\n",
@@ -172,11 +175,40 @@ void FCLNeuron::doLearning() {
 			}
 #endif
 		}
+
+		/* record weight change between every neurons */
+		weightChangeArray[i] = *weightschp;
 		inputsp++;
 		maskp++;
 		weightsp++;
 		weightschp++;
 	}
+
+	/* Winner-takes-all among delay arrays */
+	for (int i = 0; i < nInputs; i += nFilterGroup)
+	{	
+		int maxIndex = i;
+		for (int j = i + 1; j < i + nFilterGroup && j < nInputs; ++j) 
+		{
+			if (fabs(weightChangeArray[j]) > fabs(weightChangeArray[maxIndex])) 
+			{
+				weightChangeArray[maxIndex] = 0;
+				maxIndex = j;
+			}
+			else
+			{
+				weightChangeArray[j] = 0;
+			}
+		}
+	}
+
+	weightsp = weights;
+	for (int i = 0; i < nInputs; i++) 
+	{
+		*weightsp = (*weightsp) + weightChangeArray[i];
+		weightsp++;
+	}
+
 	biasweight = biasweight + bias * error * learningRate - biasweight * decay * learningRate;
 }
 

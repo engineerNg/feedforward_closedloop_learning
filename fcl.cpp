@@ -79,6 +79,7 @@ void FeedforwardClosedloopLearning::setDecay(double decay) {
 }
 
 void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, const std::vector<double> &error) {
+
 	if (input.size() != ni) {
 		char tmp[256];
 		sprintf(tmp,"Input array dim mismatch: got: %ld, want: %d.",input.size(),ni);
@@ -87,17 +88,23 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 		#endif
 		throw tmp;
 	}
-	if (error.size() != ni) {
-		char tmp[256];
-		sprintf(tmp,
-			"Error array dim mismatch: got: %ld, want: %d "
-			"which is the number of neurons in the 1st hidden layer!",
-			error.size(),layers[0]->getNneurons());
-		#ifdef DEBUG
-		fprintf(stderr,"%s\n",tmp);
-		#endif
-		throw tmp;
-	}
+	// if (error.size() != ni) {
+	// 	char tmp[256];
+	// 	sprintf(tmp,
+	// 		"Error array dim mismatch: got: %ld, want: %d "
+	// 		"which is the number of neurons in the 1st hidden layer!",
+	// 		error.size(),layers[0]->getNneurons());
+	// 	#ifdef DEBUG
+	// 	fprintf(stderr,"%s\n",tmp);
+	// 	#endif
+	// 	throw tmp;
+	// }
+
+	bool isLearning = false;
+
+	// if (errorPrev == 0) {
+	// 	isLearning = true;
+	// }
 
 	for(int i=0;i<(layers[0]->getNneurons());i++) {
 		layers[0]->getNeuron(i)->setError(error[i]);
@@ -185,6 +192,12 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 		}
 	}
 
+	errorPrev = error[0];
+
+	// if (isLearning == true) {
+	// 	fprintf(stderr, "Learn! ");
+	// 	doLearning();
+	// }
 	doLearning();
 
 	// we set the input to the input layer
@@ -352,7 +365,7 @@ void FeedforwardClosedloopLearning::doStep(const std::vector<double> &input, con
 // 		}
 // 	}
 // 	//fprintf(stderr, "%ld %e ", step, err);
-// 	// errorPrev = err;
+	
 
 // 	doLearning();
 	setStep();

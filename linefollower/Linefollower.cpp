@@ -3,6 +3,7 @@
 #include <QtGui>
 #include "fcl_util.h"
 #include <viewer/Viewer.h>
+#include <vector>
 
 #include "Linefollower.h"
 
@@ -35,8 +36,10 @@ protected:
 	int learningOff = 1;
 
 	long step = 0;
+	long stepBeforeSuccess = 0;
 
 	double avgError = 0;
+	double avgErrorAfterLearning = 0;
 
 	int successCtr = 0;
 
@@ -56,11 +59,23 @@ protected:
 	double lastDistance = 0;
 
 	// history step = 3.
-	double lastError[3] = {0};
-	double lastControl[3] = {0};
+	// double lastError[3] = {0};
+	double lastControl = 0.0f;
+
+	double lastError = 0.0f;
+
+	double lastVL = 0.0f;
 
 	// NN control error input.
 	std::vector<double> nnError;
+
+	const int delayNum = 10;
+
+	std::vector<std::vector<double>> arrays;
+
+	std::vector<double> predWithDelay;
+
+	bool isLearning = true;
 
 public:
 	LineFollower(World *world, QWidget *parent = 0) :
@@ -89,8 +104,6 @@ public:
 			nFiltersInput,
 			minT,
 			maxT);
-
-		
 
 		nn_control = new FeedforwardClosedloopLearningWithFilterbank(
 			nInputs,
@@ -124,6 +137,20 @@ public:
 		// dynamicModel->setBias(1);
 		// dynamicModel->setActivationFunction(FCLNeuron::TANH);
 		// dynamicModel->setMomentum(0.9);
+
+		arrays.resize(5);
+
+		for (int i = 0; i < 5; ++i) {
+			arrays[i].resize(30);
+		}
+
+		for (int i = 0; i < 5; ++i) {
+			for (int j = 0; j < 30; ++j) {
+				arrays[i][j] = 0; 
+			}
+   		}
+
+		predWithDelay.resize(150);
 	}
 
 	~LineFollower() {
@@ -144,6 +171,8 @@ public:
 	inline long getStep() {return step;}
 
 	inline double getAvgError() {return avgError;}
+
+	inline double getWeightChange() {return weightChange;}
 
 	// here we do all the behavioural computations
 	// as an example: line following and obstacle avoidance
@@ -189,37 +218,63 @@ public:
 			nn_control->setLearningRate(learningRate);
 		}
 
+		/* Disable learning after successful one. */
+		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
+			fcl->setLearningRate(0);
+			isLearning = false;
+		}
+
 		fprintf(stderr,"%e %e %e %e ",leftGround,rightGround,leftGround2,rightGround2);
 		for(int i=0;i<racer->getNsensors();i++) {
-			pred[i] = -(racer->getSensorArrayValue(i))*10;
+			pred[i] = -(racer->getSensorArrayValue(i))*2;
 			// workaround of a bug in Enki
 			if (pred[i]<0) pred[i] = 0;
 			//if (i>=racer->getNsensors()/2) fprintf(stderr,"%e ",pred[i]);
 		}
 
+		int index = 0;
+		for (int j = 0; j < 30; ++j)
+		{
+			for (int i = 0; i < 5; ++i) 
+			{
+				predWithDelay[index++] = arrays[i][j];
+			}
+		}
+
+		/* delay */
+		for (int i = 4; i >= 0; i--) 
+		{
+			if (i == 0)
+			{
+				for (int j = 0; j < 30; ++j) 
+				{
+					arrays[i][j] = pred[j];
+				}
+			}
+			else
+			{
+				for (int j = 0; j < 30; ++j) 
+				{
+					arrays[i][j] = arrays[i-1][j];
+				}
+			}
+   		}
+
 		/* When the robot is on track, sensors capture a large value, vise versa. */ 
 		double error = (leftGround+leftGround2*2)-(rightGround+rightGround2*2);
 		fprintf(stderr, "%e ", error);
 
+		double errorToNetwork = error * fabs(lastVL) / (fabs(lastVL) + fabs(lastControl) + 0.00001);
+
 		//fprintf(stderr,"%e %e %e %e ",pred[0], pred[14], pred[15], pred[29]);
 
 		for(auto &e:err) {
-			e = error;
+			e = errorToNetwork;
                 }
 		// !!!!
 
-		// nowDistance = error;
-
-		// // if (nowDistance < lastDistance)
-		// // {
-		// // 	fcl->setLearningRate(learningRate);
-		// // 	fprintf(stderr, "Learning! ");
-		// // }
-		// // else
-		// // {
-		// // 	fcl->setLearningRate(0);
-		// // }
-
+		/****************************************************/
+		/* Learning  */
 		// lastDistance = nowDistance;
 
 		// std::vector<double> dynamicInput = {lastControl[2], -lastControl[2], lastError[0]};
@@ -230,73 +285,29 @@ public:
 
 		// dynamicModel->doStepBackProp(dynamicInput, dynamicError);
 
-		nn_control->getOutputLayer()->setActivationFunction(FCLNeuron::ActivationFunction::LINEAR);
-	
-		if (step > 8000)
-		{
-			nn_control->setLearningRate(0);
-		}
-		else
-		{
-			nn_control->setLearningRate(learningRate);
-		}
-
-		for(auto &e:nnError) 
-		{
-			e = error - nn_control->getOutputLayer()->getNeuron(0)->getOutput();
-		}
-		if (step > 100)
-		{
-			//nn_control->doStepBackProp(pred, nnError);
-		}
-
 		fcl->getOutputLayer()->setActivationFunction(FCLNeuron::ActivationFunction::LINEAR);
 
-
 		fcl->doStep(pred,err);
-		// fcl->doStepBackProp(pred,err);
-				
-		// weightChange -= weightSum;
+   		/****************************************************/
 
-		// float vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*50 +
-		// 		   (fcl->getOutputLayer()->getNeuron(1)->getOutput())*10 +
-		// 		   (fcl->getOutputLayer()->getNeuron(2)->getOutput())*2);
-		// float vR = (float)((fcl->getOutputLayer()->getNeuron(3)->getOutput())*50 +
-		// 		   (fcl->getOutputLayer()->getNeuron(4)->getOutput())*10 +
-		// 		   (fcl->getOutputLayer()->getNeuron(5)->getOutput())*2);
+		float vL;
+		float vR;
 
+		vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
+		vR = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
 
-		float vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
-		float vR = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*(200));
-
-		// float vL = 0;
-		// float vR = 0;
+		if(vL > 50) vL = 50;
+		if(vR > 50) vR = 50;
 
 		double erroramp = error * fbgain;
 
 		fprintf(stderr, "%ld ", step);
-
-		// fprintf(stderr, "%e ", erroramp);
-		//fprintf(stderr,"%e ",error);
-		
-		// Outputs of each neuron of output layer. 
-		// fprintf(stderr,"%e ",vL);
-		// fprintf(stderr,"%e \n",vR);
-
-		// fprintf(stderr,"%e ", nn_control->getLayer(2)->getNeuron(0)->getError());
-		// fprintf(stderr,"%e ", nn_control->getLayer(1)->getNeuron(0)->getError());
-		// fprintf(stderr,"%e ", nn_control->getLayer(0)->getNeuron(0)->getError());
-		// fprintf(stderr,"%e ", nn_control->getLayer(0)->getNeuron(1)->getError());
-		// fprintf(stderr,"%e ", nn_control->getLayer(0)->getNeuron(2)->getError());
-
-
 		fprintf(stderr,"\n");
-
-		// racer->leftSpeed = speed + erroramp + vL;
-		// racer->rightSpeed = speed - (erroramp + vR);
 
 		racer->leftSpeed = speed + erroramp + vL;
 		racer->rightSpeed = speed - (erroramp + vR);
+
+		weightChange = fcl->getLayer(0)->getWeightDistanceFromInitialWeights();
 		
 		// documenting
 		// if the learning is off we set the error to zero which
@@ -304,16 +315,38 @@ public:
 		if (learningOff) error = 0;
        	avgError = avgError + (error - avgError)*avgErrorDecay;
 		double absError = fabs(avgError);
+
+		/* Record the avgerror in the next 1000 steps after successful learning. */
+		if (isLearning == false) 
+		{
+			avgErrorAfterLearning = avgErrorAfterLearning + (error - avgErrorAfterLearning)*avgErrorDecay;
+			double absErrorAfterLearning = fabs(avgErrorAfterLearning);
+			fprintf(stderr, "After learning! step:%ld, avgErr:%e \n", stepBeforeSuccess, absErrorAfterLearning);
+		}
+
 		if (absError > SQ_ERROR_THRES) {
 			successCtr = 0;
 		} else {
 			successCtr++;
 		}
 
-		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
+		if (stepBeforeSuccess > 1000) {
 			qApp->quit();
 		}
-		if (step>MAX_STEPS) {
+
+		// if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
+		// 	qApp->quit();
+		// }	
+
+		// if (step>MAX_STEPS) {
+		// 		qApp->quit();
+		// 	}	
+
+		if (step>MAX_STEPS && isLearning == true) {
+			qApp->quit();
+		}
+
+		if(vL == 50) {
 			qApp->quit();
 		}
 
@@ -346,19 +379,28 @@ public:
 
 		fprintf(flog, "\t%e", fcl->getOutputLayer()->getOutput(0));
 
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(40));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(41));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(42));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(43));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(44));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(24));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(25));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(26));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(27));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(28));
 		fprintf(flog, "\t%e", pred[4]);
 
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(100));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(102));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(104));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(106));
-		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(108));
-		fprintf(flog, "\t%e", pred[10]);
+
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(95));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(96));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(97));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(98));
+		fprintf(flog, "\t%e", fcl->getLayer(0)->getNeuron(0)->getInput(99));
+		fprintf(flog, "\t%e", pred[19]);
+
+
+		// fprintf(flog, "\t%e", -fcl->getLayer(0)->getNeuron(0)->getInput(100));
+		// fprintf(flog, "\t%e", -fcl->getLayer(0)->getNeuron(0)->getInput(101));
+		// fprintf(flog, "\t%e", -fcl->getLayer(0)->getNeuron(0)->getInput(102));
+		// fprintf(flog, "\t%e", -fcl->getLayer(0)->getNeuron(0)->getInput(103));
+		// fprintf(flog, "\t%e", -fcl->getLayer(0)->getNeuron(0)->getInput(104));
+		// fprintf(flog, "\t%e", -pred[10]);
 
 
 		// fprintf(flog, "\t%e", nn_control->getOutputLayer()->getOutput(0));
@@ -410,15 +452,14 @@ public:
 			}
 		}
 
-		lastError[0] = error;
-		lastError[1] = error;
-		lastError[2] = error;
+		lastError = error;
 
-		lastControl[0] = erroramp;
-		lastControl[1] = erroramp;
-		lastControl[2] = erroramp;
+		lastVL = vL;
+
+		lastControl = erroramp;
 
 		step++;
+		if (isLearning == false) stepBeforeSuccess++;
 
 		// if (step==11000) {
 		// 	for(int i=0;i<fcl->getNumLayers();i++) {
@@ -463,10 +504,10 @@ void singleRun(int argc,
 void statsRun(int argc,
 	      char *argv[]) {
 	FILE* f = fopen("stats.dat","wt");
-	for(float learningRate = 0.00001f; learningRate < 0.1; learningRate = learningRate * 1.25f) {
-		srandom(1);
-		singleRun(argc,argv,learningRate,f);
-		fflush(f);
+	for(float learningRate = 0.001f; learningRate < 0.1; learningRate = learningRate * 1.25f) {
+		// srandom(1);
+		// singleRun(argc,argv,learningRate,f);
+		// fflush(f);
 		srandom(42);
 		singleRun(argc,argv,learningRate,f);
 		fflush(f);
@@ -486,7 +527,7 @@ int main(int argc, char *argv[]) {
 	}
 	switch (n) {
 	case 0:
-		singleRun(argc,argv,0.001f);
+		singleRun(argc,argv ,0.025f);
 		// singleRun(argc,argv,0.0f);
 		// singleRun(argc,argv,0.00025f);
 		break;
@@ -498,4 +539,4 @@ int main(int argc, char *argv[]) {
 		break;
 	}
 	return 0;
-}
+}      

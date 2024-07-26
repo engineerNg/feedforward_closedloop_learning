@@ -3,6 +3,6 @@ set output 'weightchange_out.eps'
 set grid
 set xtics 0,4000,16000
 
-plot 'flog.tsv' using ($0):6 with lines notitle\
+plot 'flog.tsv' using ($0):18 with lines notitle\
 
 

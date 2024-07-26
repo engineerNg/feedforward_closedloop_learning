@@ -4,7 +4,7 @@ set grid
 set title "Closed-loop Error"
 set xlabel "time step"
 set ylabel "error"
-set yrange [-1:1]
+set yrange [-0.3:0.3]
 set xtics 0,4000,16000
 
 plot 'flog.tsv' using ($0):2 with lines notitle
