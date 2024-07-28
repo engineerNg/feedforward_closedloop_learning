@@ -76,6 +76,7 @@ protected:
 	std::vector<double> predWithDelay;
 
 	bool isLearning = true;
+	bool isCounting = false;
 
 public:
 	LineFollower(World *world, QWidget *parent = 0) :
@@ -170,9 +171,15 @@ public:
 
 	inline long getStep() {return step;}
 
+	inline long getStepToConverge() {return (1000 + (step - successCtr));}
+
 	inline double getAvgError() {return avgError;}
 
+	inline double getAvgErrorAfterLearning() {return avgErrorAfterLearning;}
+
 	inline double getWeightChange() {return weightChange;}
+
+	inline bool getTrainingFinished() {return isLearning;}
 
 	// here we do all the behavioural computations
 	// as an example: line following and obstacle avoidance
@@ -196,8 +203,15 @@ public:
 		    (leftGround2<a) ||
 		    (rightGround2<a)) {
 			learningOff = 30;
+			
 			// learningOff = 5;
 		}
+
+		if ((racer->pos.x<75) && (racer->pos.y<150) && isLearning == false && isCounting == false) 
+		{
+			isCounting = true;
+		}
+
 		if (racer->pos.x < border) {
 			racer->angle = 0;
 			trackCompletedCtr = STEPS_OFF_TRACK;
@@ -211,15 +225,14 @@ public:
 		//fprintf(stderr,"%d ",learningOff);
 		if (learningOff>0) {
 			fcl->setLearningRate(0);
-			nn_control->setLearningRate(0);
 			learningOff--;
 		} else {
 			fcl->setLearningRate(learningRate);
-			nn_control->setLearningRate(learningRate);
 		}
 
 		/* Disable learning after successful one. */
-		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) {
+		if (successCtr>STEPS_BELOW_ERR_THRESHOLD) 
+		{
 			fcl->setLearningRate(0);
 			isLearning = false;
 		}
@@ -269,7 +282,7 @@ public:
 		//fprintf(stderr,"%e %e %e %e ",pred[0], pred[14], pred[15], pred[29]);
 
 		for(auto &e:err) {
-			e = errorToNetwork;
+			e = error;
                 }
 		// !!!!
 
@@ -302,6 +315,7 @@ public:
 		double erroramp = error * fbgain;
 
 		fprintf(stderr, "%ld ", step);
+		fprintf(stderr, "%d ", successCtr);
 		fprintf(stderr,"\n");
 
 		racer->leftSpeed = speed + erroramp + vL;
@@ -317,7 +331,7 @@ public:
 		double absError = fabs(avgError);
 
 		/* Record the avgerror in the next 1000 steps after successful learning. */
-		if (isLearning == false) 
+		if (isCounting == true) 
 		{
 			avgErrorAfterLearning = avgErrorAfterLearning + (error - avgErrorAfterLearning)*avgErrorDecay;
 			double absErrorAfterLearning = fabs(avgErrorAfterLearning);
@@ -351,6 +365,7 @@ public:
 		}
 
 		/********************************************************************************/
+		/* Printing! */
 		// The derivative of activation function shown below:
 		// for (int i = 0; i < fcl->getOutputLayer()->getNneurons(); i++)
 		// {
@@ -459,7 +474,7 @@ public:
 		lastControl = erroramp;
 
 		step++;
-		if (isLearning == false) stepBeforeSuccess++;
+		if (isCounting == true) stepBeforeSuccess++;
 
 		// if (step==11000) {
 		// 	for(int i=0;i<fcl->getNumLayers();i++) {
@@ -496,7 +511,7 @@ void singleRun(int argc,
 	app.exec();
 	fprintf(stderr,"Finished.\n");
 	if (f) {
-		fprintf(f,"%e %ld %e\n",learningrate,linefollower.getStep(),linefollower.getAvgError());
+		fprintf(f,"%e %ld %e %e %d\n",learningrate,linefollower.getStepToConverge(),linefollower.getAvgError(), linefollower.getAvgErrorAfterLearning(), linefollower.getTrainingFinished());
 	}
 }
 
@@ -504,7 +519,7 @@ void singleRun(int argc,
 void statsRun(int argc,
 	      char *argv[]) {
 	FILE* f = fopen("stats.dat","wt");
-	for(float learningRate = 0.001f; learningRate < 0.1; learningRate = learningRate * 1.25f) {
+	for(float learningRate = 3.814697e-03f; learningRate < 1; learningRate = learningRate * 1.25f) {
 		// srandom(1);
 		// singleRun(argc,argv,learningRate,f);
 		// fflush(f);

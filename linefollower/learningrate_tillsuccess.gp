@@ -3,4 +3,5 @@ set output 'learningrate_tillsuccess.eps'
 set logscale x
 set grid
 
+
 plot 'stats_withend.dat' using 1:2 with points pointtype 2  pointsize 1 notitle
