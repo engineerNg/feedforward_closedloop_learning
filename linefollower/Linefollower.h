@@ -10,7 +10,7 @@ const int nInputs = 30;
 static constexpr int nLayers = 3;
 
 // The number of neurons in every layer
-const std::vector<int> nNeuronsInLayers = {20,12,1};
+const std::vector<int> nNeuronsInLayers = {20,12,6};
 // const std::vector<int> nNeuronsInLayers = {1,1};
 
 

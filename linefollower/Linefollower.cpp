@@ -282,7 +282,7 @@ public:
 		//fprintf(stderr,"%e %e %e %e ",pred[0], pred[14], pred[15], pred[29]);
 
 		for(auto &e:err) {
-			e = error;
+			e = errorToNetwork;
                 }
 		// !!!!
 
@@ -303,11 +303,17 @@ public:
 		fcl->doStep(pred,err);
    		/****************************************************/
 
-		float vL;
-		float vR;
+		// float vL;
+		// float vR;
 
-		vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
-		vR = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
+		// vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
+		// vR = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*200);
+		float vL = (float)((fcl->getOutputLayer()->getNeuron(0)->getOutput())*100 +
+							(fcl->getOutputLayer()->getNeuron(1)->getOutput())*20 +
+							(fcl->getOutputLayer()->getNeuron(2)->getOutput())*5);
+		float vR = (float)((fcl->getOutputLayer()->getNeuron(3)->getOutput())*100 +
+							(fcl->getOutputLayer()->getNeuron(4)->getOutput())*20 +
+							(fcl->getOutputLayer()->getNeuron(5)->getOutput())*5);
 
 		if(vL > 50) vL = 50;
 		if(vR > 50) vR = 50;

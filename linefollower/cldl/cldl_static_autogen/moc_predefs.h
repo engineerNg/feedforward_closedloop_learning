@@ -201,7 +201,7 @@
 #define __DEC_EVAL_METHOD__ 2
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "14.1.1 20240507 (Red Hat 14.1.1-1)"
+#define __VERSION__ "14.1.1 20240701 (Red Hat 14.1.1-7)"
 #define __UINT64_C(c) c ## UL
 #define __cpp_unicode_characters 200704L
 #define _STDC_PREDEF_H 1
@@ -242,7 +242,7 @@
 #define __INT_LEAST16_TYPE__ short int
 #define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
 #define __UINTMAX_C(c) c ## UL
-#define __GNUC_RH_RELEASE__ 1
+#define __GNUC_RH_RELEASE__ 7
 #define __FLT16_DIG__ 3
 #define __k8 1
 #define __FLT32X_MIN__ 2.22507385850720138309023271733240406e-308F32x
