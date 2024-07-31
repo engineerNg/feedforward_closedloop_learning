@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcldl_static.a CMakeFiles/cldl_static.dir/cldl_static_autogen/mocs_compilation.cpp.o CMakeFiles/cldl_static.dir/cldl_layer.cpp.o CMakeFiles/cldl_static.dir/cldl_net.cpp.o CMakeFiles/cldl_static.dir/cldl_neuron.cpp.o CMakeFiles/cldl_static.dir/cldl_filterbank.cpp.o CMakeFiles/cldl_static.dir/cldl_bandpass.cpp.o
-/usr/bin/ranlib libcldl_static.a
